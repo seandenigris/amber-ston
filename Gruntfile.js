@@ -35,7 +35,7 @@ module.exports = function (grunt) {
                 src: [
                     'src/STON-Kernel.st',
                     'src/STON-Core.st',
-                    'src/STON-Tests.st' // list all tests in dependency order
+                    'src/STON-Tests.st'
                 ],
                 amd_namespace: 'amber-ston',
                 libraries: ['SUnit', 'Web']

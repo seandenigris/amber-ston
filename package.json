@@ -1,7 +1,7 @@
 {
-  "name": "ston",
-  "title": "STON (Smalltalk Object Notation) for Amber",
-  "description": "Port of STON (Smalltalk Object Notation) for Amber",
+  "name": "amber-ston",
+  "title": "STON (Smalltalk Object Notation) for Amber Smalltalk",
+  "description": "Port of STON (Smalltalk Object Notation) for Amber Smalltalk",
   "version": "0.1.0",
   "homepage": "https://github.com/JupiterJones/amber-ston",
   "author": {

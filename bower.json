@@ -1,6 +1,6 @@
 {
-    "name": "ston",
-    "description": "Port of STON (Smalltalk Object Notation) for Amber",
+    "name": "amber-ston",
+    "description": "Port of STON (Smalltalk Object Notation) for Amber Smalltalk",
     "version": "0.1.0",
     "ignore": [
         "**/.*",
