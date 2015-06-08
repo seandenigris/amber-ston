@@ -12,7 +12,7 @@ $core.addMethod(
 $core.method({
 selector: "materialize:",
 protocol: 'private',
-fn: function (string){
+fn: function (string) {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -41,7 +41,7 @@ $core.addMethod(
 $core.method({
 selector: "testAssociation",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -200,7 +200,7 @@ $core.addMethod(
 $core.method({
 selector: "testBoolean",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -237,7 +237,7 @@ $core.addMethod(
 $core.method({
 selector: "testByteArray",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -261,7 +261,7 @@ $core.addMethod(
 $core.method({
 selector: "testCharacter",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -285,7 +285,7 @@ $core.addMethod(
 $core.method({
 selector: "testConvertingNewLines",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var input,result,output;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
@@ -440,7 +440,7 @@ $core.addMethod(
 $core.method({
 selector: "testDate",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var date;
 function $Date(){return $globals.Date||(typeof Date=="undefined"?nil:Date)}
@@ -467,7 +467,7 @@ $core.addMethod(
 $core.method({
 selector: "testDateAndTime",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var dateAndTime;
 function $DateAndTime(){return $globals.DateAndTime||(typeof DateAndTime=="undefined"?nil:DateAndTime)}
@@ -494,7 +494,7 @@ $core.addMethod(
 $core.method({
 selector: "testDictionary",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var collection;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -548,7 +548,7 @@ $core.addMethod(
 $core.method({
 selector: "testDictionaryWithComplexKeys",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var collection,reader;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -587,7 +587,7 @@ $core.addMethod(
 $core.method({
 selector: "testError",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 function $STONReaderError(){return $globals.STONReaderError||(typeof STONReaderError=="undefined"?nil:STONReaderError)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -628,7 +628,7 @@ $core.addMethod(
 $core.method({
 selector: "testFloat",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 function $Float(){return $globals.Float||(typeof Float=="undefined"?nil:Float)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -753,7 +753,7 @@ $core.addMethod(
 $core.method({
 selector: "testIdentityDictionary",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var collection;
 function $IdentityDictionary(){return $globals.IdentityDictionary||(typeof IdentityDictionary=="undefined"?nil:IdentityDictionary)}
@@ -803,7 +803,7 @@ $core.addMethod(
 $core.method({
 selector: "testIllegalCharacterEscapes",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 function $STONReaderError(){return $globals.STONReaderError||(typeof STONReaderError=="undefined"?nil:STONReaderError)}
@@ -897,7 +897,7 @@ $core.addMethod(
 $core.method({
 selector: "testInteger",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -970,7 +970,7 @@ $core.addMethod(
 $core.method({
 selector: "testJsonString",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var string;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
@@ -1035,7 +1035,7 @@ $core.addMethod(
 $core.method({
 selector: "testList",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var string;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -1092,7 +1092,7 @@ $core.addMethod(
 $core.method({
 selector: "testMap",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var string;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -1142,7 +1142,7 @@ $core.addMethod(
 $core.method({
 selector: "testMultiple",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var reader;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -1233,7 +1233,7 @@ $core.addMethod(
 $core.method({
 selector: "testNewSymbol",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var n,notASymbol,shouldBeSymbol;
 function $Symbol(){return $globals.Symbol||(typeof Symbol=="undefined"?nil:Symbol)}
@@ -1296,7 +1296,7 @@ $core.addMethod(
 $core.method({
 selector: "testNil",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -1320,7 +1320,7 @@ $core.addMethod(
 $core.method({
 selector: "testNull",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -1344,7 +1344,7 @@ $core.addMethod(
 $core.method({
 selector: "testObject",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -1385,7 +1385,7 @@ $core.addMethod(
 $core.method({
 selector: "testOrderedCollection",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var collection;
 function $OrderedCollection(){return $globals.OrderedCollection||(typeof OrderedCollection=="undefined"?nil:OrderedCollection)}
@@ -1425,7 +1425,7 @@ $core.addMethod(
 $core.method({
 selector: "testPoint",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -1449,7 +1449,7 @@ $core.addMethod(
 $core.method({
 selector: "testReferenceCycle",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var array;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -1497,7 +1497,7 @@ $core.addMethod(
 $core.method({
 selector: "testReferenceSharing",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var one,array;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -1542,7 +1542,7 @@ $core.addMethod(
 $core.method({
 selector: "testStreaming",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var reader;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -1599,7 +1599,7 @@ $core.addMethod(
 $core.method({
 selector: "testString",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var string;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
@@ -1664,7 +1664,7 @@ $core.addMethod(
 $core.method({
 selector: "testSymbol",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var string;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -1702,7 +1702,7 @@ $core.addMethod(
 $core.method({
 selector: "testTime",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var time;
 function $Time(){return $globals.Time||(typeof Time=="undefined"?nil:Time)}
@@ -1729,7 +1729,7 @@ $core.addMethod(
 $core.method({
 selector: "testUnknownClasses",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var input,object;
 function $STONReaderError(){return $globals.STONReaderError||(typeof STONReaderError=="undefined"?nil:STONReaderError)}
@@ -1789,7 +1789,7 @@ $core.addMethod(
 $core.method({
 selector: "testUser",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var user;
 function $STONTestUser(){return $globals.STONTestUser||(typeof STONTestUser=="undefined"?nil:STONTestUser)}
@@ -1820,7 +1820,7 @@ $core.addMethod(
 $core.method({
 selector: "testUser2",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var user;
 function $STONTestUser2(){return $globals.STONTestUser2||(typeof STONTestUser2=="undefined"?nil:STONTestUser2)}
@@ -1851,7 +1851,7 @@ $core.addMethod(
 $core.method({
 selector: "testWhitespace",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var whitespace;
 function $Character(){return $globals.Character||(typeof Character=="undefined"?nil:Character)}
@@ -1884,7 +1884,7 @@ $core.addMethod(
 $core.method({
 selector: "=",
 protocol: 'comparing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2037,7 +2037,7 @@ $core.addMethod(
 $core.method({
 selector: "boolean",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@boolean"];
@@ -2057,7 +2057,7 @@ $core.addMethod(
 $core.method({
 selector: "boolean:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 self["@boolean"]=anObject;
 return self;
@@ -2076,7 +2076,7 @@ $core.addMethod(
 $core.method({
 selector: "bytes",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@bytes"];
@@ -2096,7 +2096,7 @@ $core.addMethod(
 $core.method({
 selector: "bytes:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 self["@bytes"]=anObject;
 return self;
@@ -2115,7 +2115,7 @@ $core.addMethod(
 $core.method({
 selector: "color",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@color"];
@@ -2135,7 +2135,7 @@ $core.addMethod(
 $core.method({
 selector: "color:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 self["@color"]=anObject;
 return self;
@@ -2154,7 +2154,7 @@ $core.addMethod(
 $core.method({
 selector: "created",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@created"];
@@ -2174,7 +2174,7 @@ $core.addMethod(
 $core.method({
 selector: "created:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 self["@created"]=anObject;
 return self;
@@ -2193,7 +2193,7 @@ $core.addMethod(
 $core.method({
 selector: "description",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@description"];
@@ -2213,7 +2213,7 @@ $core.addMethod(
 $core.method({
 selector: "description:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 self["@description"]=anObject;
 return self;
@@ -2232,7 +2232,7 @@ $core.addMethod(
 $core.method({
 selector: "float",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@float"];
@@ -2252,7 +2252,7 @@ $core.addMethod(
 $core.method({
 selector: "float:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 self["@float"]=anObject;
 return self;
@@ -2271,7 +2271,7 @@ $core.addMethod(
 $core.method({
 selector: "hash",
 protocol: 'comparing',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2356,7 +2356,7 @@ $core.addMethod(
 $core.method({
 selector: "initialize",
 protocol: 'initialize-release',
-fn: function (){
+fn: function () {
 var self=this;
 function $DateAndTime(){return $globals.DateAndTime||(typeof DateAndTime=="undefined"?nil:DateAndTime)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -2382,7 +2382,7 @@ $core.addMethod(
 $core.method({
 selector: "integer",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@integer"];
@@ -2402,7 +2402,7 @@ $core.addMethod(
 $core.method({
 selector: "integer:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 self["@integer"]=anObject;
 return self;
@@ -2421,7 +2421,7 @@ $core.addMethod(
 $core.method({
 selector: "modified",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@modified"];
@@ -2441,7 +2441,7 @@ $core.addMethod(
 $core.method({
 selector: "modified:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 self["@modified"]=anObject;
 return self;
@@ -2460,7 +2460,7 @@ $core.addMethod(
 $core.method({
 selector: "tags",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@tags"];
@@ -2480,7 +2480,7 @@ $core.addMethod(
 $core.method({
 selector: "tags:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 self["@tags"]=anObject;
 return self;
@@ -2500,7 +2500,7 @@ $core.addMethod(
 $core.method({
 selector: "dummy",
 protocol: 'instance creation',
-fn: function (){
+fn: function () {
 var self=this;
 function $Float(){return $globals.Float||(typeof Float=="undefined"?nil:Float)}
 function $ByteArray(){return $globals.ByteArray||(typeof ByteArray=="undefined"?nil:ByteArray)}
@@ -2617,7 +2617,7 @@ $core.addMethod(
 $core.method({
 selector: "stonName",
 protocol: 'ston-core',
-fn: function (){
+fn: function () {
 var self=this;
 return "TestDomainObject";
 
@@ -2640,7 +2640,7 @@ $core.addMethod(
 $core.method({
 selector: "printElementsOn:",
 protocol: 'printing',
-fn: function (stream){
+fn: function (stream) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2675,7 +2675,7 @@ $core.addMethod(
 $core.method({
 selector: "classTree",
 protocol: 'instance creation',
-fn: function (){
+fn: function () {
 var self=this;
 function $Object(){return $globals.Object||(typeof Object=="undefined"?nil:Object)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -2701,7 +2701,7 @@ $core.addMethod(
 $core.method({
 selector: "classTree:",
 protocol: 'instance creation',
-fn: function (topClass){
+fn: function (topClass) {
 var self=this;
 var map;
 function $IdentityDictionary(){return $globals.IdentityDictionary||(typeof IdentityDictionary=="undefined"?nil:IdentityDictionary)}
@@ -2795,7 +2795,7 @@ $core.addMethod(
 $core.method({
 selector: "classTreeExtended",
 protocol: 'instance creation',
-fn: function (){
+fn: function () {
 var self=this;
 function $Object(){return $globals.Object||(typeof Object=="undefined"?nil:Object)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -2821,7 +2821,7 @@ $core.addMethod(
 $core.method({
 selector: "classTreeExtended:",
 protocol: 'instance creation',
-fn: function (topClass){
+fn: function (topClass) {
 var self=this;
 var map;
 function $IdentityDictionary(){return $globals.IdentityDictionary||(typeof IdentityDictionary=="undefined"?nil:IdentityDictionary)}
@@ -2960,7 +2960,7 @@ $core.addMethod(
 $core.method({
 selector: "stonName",
 protocol: 'ston-core',
-fn: function (){
+fn: function () {
 var self=this;
 return "TestMap";
 
@@ -2983,7 +2983,7 @@ $core.addMethod(
 $core.method({
 selector: "=",
 protocol: 'comparing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3050,7 +3050,7 @@ $core.addMethod(
 $core.method({
 selector: "enabled",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@enabled"];
@@ -3070,7 +3070,7 @@ $core.addMethod(
 $core.method({
 selector: "enabled:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 self["@enabled"]=anObject;
 return self;
@@ -3089,7 +3089,7 @@ $core.addMethod(
 $core.method({
 selector: "hash",
 protocol: 'comparing',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3126,7 +3126,7 @@ $core.addMethod(
 $core.method({
 selector: "initialize",
 protocol: 'initialize-release',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3158,7 +3158,7 @@ $core.addMethod(
 $core.method({
 selector: "password",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@password"];
@@ -3178,7 +3178,7 @@ $core.addMethod(
 $core.method({
 selector: "password:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 self["@password"]=anObject;
 return self;
@@ -3197,7 +3197,7 @@ $core.addMethod(
 $core.method({
 selector: "username",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@username"];
@@ -3217,7 +3217,7 @@ $core.addMethod(
 $core.method({
 selector: "username:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 self["@username"]=anObject;
 return self;
@@ -3237,7 +3237,7 @@ $core.addMethod(
 $core.method({
 selector: "dummy",
 protocol: 'instance creation',
-fn: function (){
+fn: function () {
 var self=this;
 var username,password;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
@@ -3319,7 +3319,7 @@ $core.addMethod(
 $core.method({
 selector: "stonName",
 protocol: 'ston-core',
-fn: function (){
+fn: function () {
 var self=this;
 return "TestUser";
 
@@ -3342,7 +3342,7 @@ $core.addMethod(
 $core.method({
 selector: "fromSton:",
 protocol: 'ston-core',
-fn: function (stonReader){
+fn: function (stonReader) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3395,7 +3395,7 @@ $core.addMethod(
 $core.method({
 selector: "stonOn:",
 protocol: 'ston-core',
-fn: function (stonWriter){
+fn: function (stonWriter) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3438,7 +3438,7 @@ $core.addMethod(
 $core.method({
 selector: "stonName",
 protocol: 'ston-core',
-fn: function (){
+fn: function () {
 var self=this;
 return "TestUser2";
 
@@ -3461,7 +3461,7 @@ $core.addMethod(
 $core.method({
 selector: "stonShouldWriteNilInstVars",
 protocol: 'ston-core',
-fn: function (){
+fn: function () {
 var self=this;
 return true;
 
@@ -3480,7 +3480,7 @@ $core.addMethod(
 $core.method({
 selector: "stonAllInstVarNames",
 protocol: 'ston-core',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=["username", "password", "enabled"];
@@ -3500,7 +3500,7 @@ $core.addMethod(
 $core.method({
 selector: "stonName",
 protocol: 'ston-core',
-fn: function (){
+fn: function () {
 var self=this;
 return "TestUser3";
 
@@ -3523,7 +3523,7 @@ $core.addMethod(
 $core.method({
 selector: "testFromString",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var object;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -3550,7 +3550,7 @@ $core.addMethod(
 $core.method({
 selector: "testPrettyPrinting",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var object;
 function $STONTestUser(){return $globals.STONTestUser||(typeof STONTestUser=="undefined"?nil:STONTestUser)}
@@ -3600,7 +3600,7 @@ $core.addMethod(
 $core.method({
 selector: "testRoomExitCycles",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var model,room1,room2,exit1,exit2,ston,object;
 function $STONTestMap(){return $globals.STONTestMap||(typeof STONTestMap=="undefined"?nil:STONTestMap)}
@@ -3823,7 +3823,7 @@ $core.addMethod(
 $core.method({
 selector: "testToString",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var object;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -3851,7 +3851,7 @@ $core.addMethod(
 $core.method({
 selector: "fastReadFromFileNamed:",
 protocol: 'utilities',
-fn: function (path){
+fn: function (path) {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 function $ZnBufferedReadStream(){return $globals.ZnBufferedReadStream||(typeof ZnBufferedReadStream=="undefined"?nil:ZnBufferedReadStream)}
@@ -3893,7 +3893,7 @@ $core.addMethod(
 $core.method({
 selector: "fastWrite:toFileNamed:",
 protocol: 'utilities',
-fn: function (object,path){
+fn: function (object, path) {
 var self=this;
 function $ZnBufferedWriteStream(){return $globals.ZnBufferedWriteStream||(typeof ZnBufferedWriteStream=="undefined"?nil:ZnBufferedWriteStream)}
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -3940,7 +3940,7 @@ $core.addMethod(
 $core.method({
 selector: "readFromFileNamed:",
 protocol: 'utilities',
-fn: function (path){
+fn: function (path) {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -3977,7 +3977,7 @@ $core.addMethod(
 $core.method({
 selector: "write:toFileNamed:",
 protocol: 'utilities',
-fn: function (object,path){
+fn: function (object, path) {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -4019,7 +4019,7 @@ $core.addMethod(
 $core.method({
 selector: "materialize:",
 protocol: 'private',
-fn: function (string){
+fn: function (string) {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -4048,7 +4048,7 @@ $core.addMethod(
 $core.method({
 selector: "serialize:",
 protocol: 'private',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -4086,7 +4086,7 @@ $core.addMethod(
 $core.method({
 selector: "serializeAndMaterialize:",
 protocol: 'private',
-fn: function (object){
+fn: function (object) {
 var self=this;
 var serialization,materialization;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -4113,7 +4113,7 @@ $core.addMethod(
 $core.method({
 selector: "serializeAndMaterializeJsonMode:",
 protocol: 'private',
-fn: function (object){
+fn: function (object) {
 var self=this;
 var serialization,materialization;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -4140,7 +4140,7 @@ $core.addMethod(
 $core.method({
 selector: "serializeJson:",
 protocol: 'private',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -4178,7 +4178,7 @@ $core.addMethod(
 $core.method({
 selector: "testAssociations",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var associations;
 function $OrderedCollection(){return $globals.OrderedCollection||(typeof OrderedCollection=="undefined"?nil:OrderedCollection)}
@@ -4214,7 +4214,7 @@ $core.addMethod(
 $core.method({
 selector: "testCharacters",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var characters;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -4248,7 +4248,7 @@ $core.addMethod(
 $core.method({
 selector: "testCollections",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var collections;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -4310,7 +4310,7 @@ $core.addMethod(
 $core.method({
 selector: "testDatesAndTimes",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var datesAndTimes;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -4349,7 +4349,7 @@ $core.addMethod(
 $core.method({
 selector: "testDomainObject",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var object,objects;
 function $STONTestDomainObject(){return $globals.STONTestDomainObject||(typeof STONTestDomainObject=="undefined"?nil:STONTestDomainObject)}
@@ -4426,7 +4426,7 @@ $core.addMethod(
 $core.method({
 selector: "testEmpty",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var empty;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -4461,7 +4461,7 @@ $core.addMethod(
 $core.method({
 selector: "testFloats",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var floats,serialization,materialization;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -4527,7 +4527,7 @@ $core.addMethod(
 $core.method({
 selector: "testJsonMode",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var object;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -4574,7 +4574,7 @@ $core.addMethod(
 $core.method({
 selector: "testOrderedDictionary",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var dictionaries,orderedDictionaryClass,orderedIdentityDictionaryClass;
 function $Smalltalk(){return $globals.Smalltalk||(typeof Smalltalk=="undefined"?nil:Smalltalk)}
@@ -4692,7 +4692,7 @@ $core.addMethod(
 $core.method({
 selector: "testPrimitives",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var primitives;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -4719,7 +4719,7 @@ $core.addMethod(
 $core.method({
 selector: "testSmallDictionary",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var dictionaries,smallDictionaryClass;
 function $Smalltalk(){return $globals.Smalltalk||(typeof Smalltalk=="undefined"?nil:Smalltalk)}
@@ -4783,7 +4783,7 @@ $core.addMethod(
 $core.method({
 selector: "testSmallIntegers",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var integers;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -4810,7 +4810,7 @@ $core.addMethod(
 $core.method({
 selector: "testStrings",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var strings;
 function $Collection(){return $globals.Collection||(typeof Collection=="undefined"?nil:Collection)}
@@ -4845,7 +4845,7 @@ $core.addMethod(
 $core.method({
 selector: "testSymbols",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var symbols;
 function $Collection(){return $globals.Collection||(typeof Collection=="undefined"?nil:Collection)}
@@ -4884,7 +4884,7 @@ $core.addMethod(
 $core.method({
 selector: "testTextAndRunArray",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var texts;
 function $Text(){return $globals.Text||(typeof Text=="undefined"?nil:Text)}
@@ -4912,7 +4912,7 @@ $core.addMethod(
 $core.method({
 selector: "testUser",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var user,users;
 function $STONTestUser(){return $globals.STONTestUser||(typeof STONTestUser=="undefined"?nil:STONTestUser)}
@@ -4989,7 +4989,7 @@ $core.addMethod(
 $core.method({
 selector: "testUser2",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var user,users;
 function $STONTestUser2(){return $globals.STONTestUser2||(typeof STONTestUser2=="undefined"?nil:STONTestUser2)}
@@ -5072,7 +5072,7 @@ $core.addMethod(
 $core.method({
 selector: "materialize:",
 protocol: 'private',
-fn: function (string){
+fn: function (string) {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -5102,7 +5102,7 @@ $core.addMethod(
 $core.method({
 selector: "serialize:",
 protocol: 'private',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -5142,7 +5142,7 @@ $core.addMethod(
 $core.method({
 selector: "serializeJson:",
 protocol: 'private',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -5188,7 +5188,7 @@ $core.addMethod(
 $core.method({
 selector: "serialize:",
 protocol: 'private',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -5227,7 +5227,7 @@ $core.addMethod(
 $core.method({
 selector: "serializeJson:",
 protocol: 'private',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -5272,7 +5272,7 @@ $core.addMethod(
 $core.method({
 selector: "serialize:",
 protocol: 'private',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -5310,7 +5310,7 @@ $core.addMethod(
 $core.method({
 selector: "serializeJson:",
 protocol: 'private',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -5348,7 +5348,7 @@ $core.addMethod(
 $core.method({
 selector: "serializePretty:",
 protocol: 'private',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -5387,7 +5387,7 @@ $core.addMethod(
 $core.method({
 selector: "testAssociation",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -5460,7 +5460,7 @@ $core.addMethod(
 $core.method({
 selector: "testBoolean",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -5497,23 +5497,17 @@ $core.addMethod(
 $core.method({
 selector: "testByteArray",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
-//>>excludeStart("ctx", pragmas.excludeDebugContexts);
-return $core.withContext(function($ctx1) {
-//>>excludeEnd("ctx");
-self._assert_($recv(self._serialize_([(1), (2), (3)]._asByteArray())).__eq("ByteArray['010203']"));
 return self;
-//>>excludeStart("ctx", pragmas.excludeDebugContexts);
-}, function($ctx1) {$ctx1.fill(self,"testByteArray",{},$globals.STONWriterTests)});
-//>>excludeEnd("ctx");
+
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "testByteArray\x0a\x09self assert: (self serialize: #(1 2 3) asByteArray) = 'ByteArray[''010203'']'",
+source: "testByteArray\x0a\x09\x22No ByteArray in Amber\x22\x0a\x09\x22self assert: (self serialize: #(1 2 3) asByteArray) = 'ByteArray[''010203'']'\x22",
 referencedClasses: [],
 //>>excludeEnd("ide");
-messageSends: ["assert:", "=", "serialize:", "asByteArray"]
+messageSends: []
 }),
 $globals.STONWriterTests);
 
@@ -5521,7 +5515,7 @@ $core.addMethod(
 $core.method({
 selector: "testCustomNewline",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var output;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
@@ -5568,7 +5562,7 @@ $core.addMethod(
 $core.method({
 selector: "testDate",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var date;
 function $Date(){return $globals.Date||(typeof Date=="undefined"?nil:Date)}
@@ -5595,7 +5589,7 @@ $core.addMethod(
 $core.method({
 selector: "testDateAndTime",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var dateAndTime;
 function $DateAndTime(){return $globals.DateAndTime||(typeof DateAndTime=="undefined"?nil:DateAndTime)}
@@ -5622,7 +5616,7 @@ $core.addMethod(
 $core.method({
 selector: "testDictionary",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var collection;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -5676,7 +5670,7 @@ $core.addMethod(
 $core.method({
 selector: "testDictionaryWithComplexKeys",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var collection;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -5711,7 +5705,7 @@ $core.addMethod(
 $core.method({
 selector: "testDoubleQuotedString",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var string;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
@@ -5776,7 +5770,7 @@ $core.addMethod(
 $core.method({
 selector: "testEmptyArrayPretty",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -5801,7 +5795,7 @@ $core.addMethod(
 $core.method({
 selector: "testEmptyDictionaryPretty",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -5826,7 +5820,7 @@ $core.addMethod(
 $core.method({
 selector: "testFloat",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 function $Float(){return $globals.Float||(typeof Float=="undefined"?nil:Float)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -5938,7 +5932,7 @@ return self;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "testFloat\x0a\x09self assert: (self serialize: 1.5) = '1.5'.\x0a\x09self assert: (self serialize: 0.0) = '0.0'.\x0a\x09self assert: (self serialize: -1.5) = '-1.5'.\x0a\x09self assert: ((self serialize: Float pi) beginsWith:  '3.14159').\x0a\x09self assert: ((self serialize: 1/3) beginsWith:  '0.333').\x0a\x09self assert: (self serialize: (10 raisedTo: 100) asFloat) = '1.0e100'.\x0a\x09self assert: (self serialize: (10 raisedTo: -50) asFloat) = '1.0e-50'.\x0a\x09self assert: (self serialize: (10 raisedTo: -50) asFloat negated) = '-1.0e-50'.",
+source: "testFloat\x0a\x09\x22No Float in Amber\x22\x0a\x09self assert: (self serialize: 1.5) = '1.5'.\x0a\x09self assert: (self serialize: 0.0) = '0.0'.\x0a\x09self assert: (self serialize: -1.5) = '-1.5'.\x0a\x09self assert: ((self serialize: Float pi) beginsWith:  '3.14159').\x0a\x09self assert: ((self serialize: 1/3) beginsWith:  '0.333').\x0a\x09self assert: (self serialize: (10 raisedTo: 100) asFloat) = '1.0e100'.\x0a\x09self assert: (self serialize: (10 raisedTo: -50) asFloat) = '1.0e-50'.\x0a\x09self assert: (self serialize: (10 raisedTo: -50) asFloat negated) = '-1.0e-50'.",
 referencedClasses: ["Float"],
 //>>excludeEnd("ide");
 messageSends: ["assert:", "=", "serialize:", "beginsWith:", "pi", "/", "asFloat", "raisedTo:", "negated"]
@@ -5949,7 +5943,7 @@ $core.addMethod(
 $core.method({
 selector: "testIdentityDictionary",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var collection;
 function $IdentityDictionary(){return $globals.IdentityDictionary||(typeof IdentityDictionary=="undefined"?nil:IdentityDictionary)}
@@ -5999,7 +5993,7 @@ $core.addMethod(
 $core.method({
 selector: "testInteger",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -6072,7 +6066,7 @@ $core.addMethod(
 $core.method({
 selector: "testIsSimpleSymbol",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -6215,7 +6209,7 @@ $core.addMethod(
 $core.method({
 selector: "testKeepingNewLines",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var input,result,output;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
@@ -6389,7 +6383,7 @@ $core.addMethod(
 $core.method({
 selector: "testList",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -6452,7 +6446,7 @@ $core.addMethod(
 $core.method({
 selector: "testMap",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var map;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -6542,7 +6536,7 @@ $core.addMethod(
 $core.method({
 selector: "testNil",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -6566,7 +6560,7 @@ $core.addMethod(
 $core.method({
 selector: "testNull",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -6590,7 +6584,7 @@ $core.addMethod(
 $core.method({
 selector: "testOrderedCollection",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var collection;
 function $OrderedCollection(){return $globals.OrderedCollection||(typeof OrderedCollection=="undefined"?nil:OrderedCollection)}
@@ -6630,7 +6624,7 @@ $core.addMethod(
 $core.method({
 selector: "testPoint",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -6654,7 +6648,7 @@ $core.addMethod(
 $core.method({
 selector: "testReferenceCycle",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var array;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -6682,7 +6676,7 @@ $core.addMethod(
 $core.method({
 selector: "testReferenceSharing",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var array,one;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -6710,7 +6704,7 @@ $core.addMethod(
 $core.method({
 selector: "testReferenceSharingError",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var serializer,array,one;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
@@ -6770,7 +6764,7 @@ $core.addMethod(
 $core.method({
 selector: "testReferenceSharingIgnore",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var serializer,array,one;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
@@ -6821,7 +6815,7 @@ $core.addMethod(
 $core.method({
 selector: "testRestrictedClassesInJsonMode",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 function $STONWriterError(){return $globals.STONWriterError||(typeof STONWriterError=="undefined"?nil:STONWriterError)}
 function $STONTestUser(){return $globals.STONTestUser||(typeof STONTestUser=="undefined"?nil:STONTestUser)}
@@ -6870,7 +6864,7 @@ $core.addMethod(
 $core.method({
 selector: "testString",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var string;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
@@ -6935,7 +6929,7 @@ $core.addMethod(
 $core.method({
 selector: "testSymbol",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -7056,7 +7050,7 @@ $core.addMethod(
 $core.method({
 selector: "testSymbolAsString",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -7093,7 +7087,7 @@ $core.addMethod(
 $core.method({
 selector: "testTime",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var time;
 function $Time(){return $globals.Time||(typeof Time=="undefined"?nil:Time)}
@@ -7120,7 +7114,7 @@ $core.addMethod(
 $core.method({
 selector: "testUser",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var user;
 function $STONTestUser(){return $globals.STONTestUser||(typeof STONTestUser=="undefined"?nil:STONTestUser)}
@@ -7151,7 +7145,7 @@ $core.addMethod(
 $core.method({
 selector: "testUser2",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var user;
 function $STONTestUser2(){return $globals.STONTestUser2||(typeof STONTestUser2=="undefined"?nil:STONTestUser2)}
@@ -7182,7 +7176,7 @@ $core.addMethod(
 $core.method({
 selector: "testUser3Nil",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var user;
 function $STONTestUser3(){return $globals.STONTestUser3||(typeof STONTestUser3=="undefined"?nil:STONTestUser3)}
@@ -7209,7 +7203,7 @@ $core.addMethod(
 $core.method({
 selector: "testUserNil",
 protocol: 'tests',
-fn: function (){
+fn: function () {
 var self=this;
 var user;
 function $STONTestUser(){return $globals.STONTestUser||(typeof STONTestUser=="undefined"?nil:STONTestUser)}

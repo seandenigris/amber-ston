@@ -1079,7 +1079,8 @@ testBoolean
 !
 
 testByteArray
-	self assert: (self serialize: #(1 2 3) asByteArray) = 'ByteArray[''010203'']'
+	"No ByteArray in Amber"
+	"self assert: (self serialize: #(1 2 3) asByteArray) = 'ByteArray[''010203'']'"
 !
 
 testCustomNewline
@@ -1138,6 +1139,7 @@ testEmptyDictionaryPretty
 !
 
 testFloat
+	"No Float in Amber"
 	self assert: (self serialize: 1.5) = '1.5'.
 	self assert: (self serialize: 0.0) = '0.0'.
 	self assert: (self serialize: -1.5) = '-1.5'.
