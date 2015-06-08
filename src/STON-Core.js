@@ -13,7 +13,7 @@ $core.addMethod(
 $core.method({
 selector: "fromStream:",
 protocol: 'convencience',
-fn: function (readStream){
+fn: function (readStream) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -38,7 +38,7 @@ $core.addMethod(
 $core.method({
 selector: "fromString:",
 protocol: 'convencience',
-fn: function (string){
+fn: function (string) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -63,7 +63,7 @@ $core.addMethod(
 $core.method({
 selector: "jsonWriter",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 function $STONWriter(){return $globals.STONWriter||(typeof STONWriter=="undefined"?nil:STONWriter)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -92,7 +92,7 @@ $core.addMethod(
 $core.method({
 selector: "listClass",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 function $Array(){return $globals.Array||(typeof Array=="undefined"?nil:Array)}
 return $Array();
@@ -111,7 +111,7 @@ $core.addMethod(
 $core.method({
 selector: "mapClass",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 function $Dictionary(){return $globals.Dictionary||(typeof Dictionary=="undefined"?nil:Dictionary)}
 return $Dictionary();
@@ -130,7 +130,7 @@ $core.addMethod(
 $core.method({
 selector: "put:asJsonOnStream:",
 protocol: 'convencience',
-fn: function (object,stream){
+fn: function (object, stream) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -154,7 +154,7 @@ $core.addMethod(
 $core.method({
 selector: "put:asJsonOnStreamPretty:",
 protocol: 'convencience',
-fn: function (object,stream){
+fn: function (object, stream) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -181,7 +181,7 @@ $core.addMethod(
 $core.method({
 selector: "put:onStream:",
 protocol: 'convencience',
-fn: function (object,stream){
+fn: function (object, stream) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -205,7 +205,7 @@ $core.addMethod(
 $core.method({
 selector: "put:onStreamPretty:",
 protocol: 'convencience',
-fn: function (object,stream){
+fn: function (object, stream) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -232,7 +232,7 @@ $core.addMethod(
 $core.method({
 selector: "reader",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 function $STONReader(){return $globals.STONReader||(typeof STONReader=="undefined"?nil:STONReader)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -258,7 +258,7 @@ $core.addMethod(
 $core.method({
 selector: "toJsonString:",
 protocol: 'convencience',
-fn: function (object){
+fn: function (object) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -292,7 +292,7 @@ $core.addMethod(
 $core.method({
 selector: "toJsonStringPretty:",
 protocol: 'convencience',
-fn: function (object){
+fn: function (object) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -326,7 +326,7 @@ $core.addMethod(
 $core.method({
 selector: "toString:",
 protocol: 'convencience',
-fn: function (object){
+fn: function (object) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -360,7 +360,7 @@ $core.addMethod(
 $core.method({
 selector: "toStringPretty:",
 protocol: 'convencience',
-fn: function (object){
+fn: function (object) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -394,7 +394,7 @@ $core.addMethod(
 $core.method({
 selector: "writer",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 function $STONWriter(){return $globals.STONWriter||(typeof STONWriter=="undefined"?nil:STONWriter)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -425,7 +425,7 @@ $core.addMethod(
 $core.method({
 selector: "atEnd",
 protocol: 'testing',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -450,7 +450,7 @@ $core.addMethod(
 $core.method({
 selector: "close",
 protocol: 'initialize-release',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -482,7 +482,7 @@ $core.addMethod(
 $core.method({
 selector: "consumeWhitespace",
 protocol: 'private',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -530,7 +530,7 @@ $core.addMethod(
 $core.method({
 selector: "error:",
 protocol: 'error handling',
-fn: function (aString){
+fn: function (aString) {
 var self=this;
 function $STONReaderError(){return $globals.STONReaderError||(typeof STONReaderError=="undefined"?nil:STONReaderError)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -556,7 +556,7 @@ $core.addMethod(
 $core.method({
 selector: "expectChar:",
 protocol: 'private',
-fn: function (character){
+fn: function (character) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -584,7 +584,7 @@ $core.addMethod(
 $core.method({
 selector: "initialize",
 protocol: 'initialize-release',
-fn: function (){
+fn: function () {
 var self=this;
 function $Dictionary(){return $globals.Dictionary||(typeof Dictionary=="undefined"?nil:Dictionary)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -622,7 +622,7 @@ $core.addMethod(
 $core.method({
 selector: "isClassChar:",
 protocol: 'private',
-fn: function (char){
+fn: function (char) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -647,7 +647,7 @@ $core.addMethod(
 $core.method({
 selector: "isClassStartChar:",
 protocol: 'private',
-fn: function (char){
+fn: function (char) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -672,7 +672,7 @@ $core.addMethod(
 $core.method({
 selector: "isSimpleSymbolChar:",
 protocol: 'private',
-fn: function (char){
+fn: function (char) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -697,7 +697,7 @@ $core.addMethod(
 $core.method({
 selector: "lookupClass:",
 protocol: 'private',
-fn: function (name){
+fn: function (name) {
 var self=this;
 function $Smalltalk(){return $globals.Smalltalk||(typeof Smalltalk=="undefined"?nil:Smalltalk)}
 function $Object(){return $globals.Object||(typeof Object=="undefined"?nil:Object)}
@@ -756,7 +756,7 @@ $core.addMethod(
 $core.method({
 selector: "match:do:",
 protocol: 'private',
-fn: function (string,block){
+fn: function (string, block) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -792,7 +792,7 @@ $core.addMethod(
 $core.method({
 selector: "matchChar:",
 protocol: 'private',
-fn: function (character){
+fn: function (character) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -824,7 +824,7 @@ $core.addMethod(
 $core.method({
 selector: "newReference",
 protocol: 'private',
-fn: function (){
+fn: function () {
 var self=this;
 var index,reference;
 function $STONReference(){return $globals.STONReference||(typeof STONReference=="undefined"?nil:STONReference)}
@@ -854,7 +854,7 @@ $core.addMethod(
 $core.method({
 selector: "next",
 protocol: 'public',
-fn: function (){
+fn: function () {
 var self=this;
 var object;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -886,7 +886,7 @@ $core.addMethod(
 $core.method({
 selector: "on:",
 protocol: 'initialize-release',
-fn: function (aReadStream){
+fn: function (aReadStream) {
 var self=this;
 self["@readStream"]=aReadStream;
 return self;
@@ -905,7 +905,7 @@ $core.addMethod(
 $core.method({
 selector: "parseCharacter",
 protocol: 'parsing-internal',
-fn: function (){
+fn: function () {
 var self=this;
 var char;
 function $Character(){return $globals.Character||(typeof Character=="undefined"?nil:Character)}
@@ -999,7 +999,7 @@ $core.addMethod(
 $core.method({
 selector: "parseCharacterHex",
 protocol: 'parsing-internal',
-fn: function (){
+fn: function () {
 var self=this;
 var value;
 function $Character(){return $globals.Character||(typeof Character=="undefined"?nil:Character)}
@@ -1040,7 +1040,7 @@ $core.addMethod(
 $core.method({
 selector: "parseCharacterHexDigit",
 protocol: 'parsing-internal',
-fn: function (){
+fn: function () {
 var self=this;
 var digit;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -1098,7 +1098,7 @@ $core.addMethod(
 $core.method({
 selector: "parseClass",
 protocol: 'parsing-internal',
-fn: function (){
+fn: function () {
 var self=this;
 var className;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -1158,7 +1158,7 @@ $core.addMethod(
 $core.method({
 selector: "parseConstantDo:",
 protocol: 'parsing-internal',
-fn: function (block){
+fn: function (block) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -1282,7 +1282,7 @@ $core.addMethod(
 $core.method({
 selector: "parseList",
 protocol: 'parsing',
-fn: function (){
+fn: function () {
 var self=this;
 var reference,array;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -1328,7 +1328,7 @@ $core.addMethod(
 $core.method({
 selector: "parseListDo:",
 protocol: 'parsing',
-fn: function (block){
+fn: function (block) {
 var self=this;
 var index;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -1394,7 +1394,7 @@ $core.addMethod(
 $core.method({
 selector: "parseListSingleton",
 protocol: 'parsing',
-fn: function (){
+fn: function () {
 var self=this;
 var value;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -1434,7 +1434,7 @@ $core.addMethod(
 $core.method({
 selector: "parseMap",
 protocol: 'parsing',
-fn: function (){
+fn: function () {
 var self=this;
 var map;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
@@ -1472,7 +1472,7 @@ $core.addMethod(
 $core.method({
 selector: "parseMapDo:",
 protocol: 'parsing',
-fn: function (block){
+fn: function (block) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -1561,7 +1561,7 @@ $core.addMethod(
 $core.method({
 selector: "parseNumber",
 protocol: 'parsing-internal',
-fn: function (){
+fn: function () {
 var self=this;
 var negated,number;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -1647,7 +1647,7 @@ $core.addMethod(
 $core.method({
 selector: "parseNumberExponent",
 protocol: 'parsing-internal',
-fn: function (){
+fn: function () {
 var self=this;
 var number,negated;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -1732,7 +1732,7 @@ $core.addMethod(
 $core.method({
 selector: "parseNumberFraction",
 protocol: 'parsing-internal',
-fn: function (){
+fn: function () {
 var self=this;
 var number,power;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -1792,7 +1792,7 @@ $core.addMethod(
 $core.method({
 selector: "parseNumberInteger",
 protocol: 'parsing-internal',
-fn: function (){
+fn: function () {
 var self=this;
 var number;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -1845,7 +1845,7 @@ $core.addMethod(
 $core.method({
 selector: "parseObject",
 protocol: 'parsing',
-fn: function (){
+fn: function () {
 var self=this;
 var targetClass,reference,object;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -1875,7 +1875,7 @@ $core.addMethod(
 $core.method({
 selector: "parseReference",
 protocol: 'parsing-internal',
-fn: function (){
+fn: function () {
 var self=this;
 var index,object;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -1910,7 +1910,7 @@ $core.addMethod(
 $core.method({
 selector: "parseString",
 protocol: 'parsing-internal',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -1935,7 +1935,7 @@ $core.addMethod(
 $core.method({
 selector: "parseStringInternal",
 protocol: 'parsing-internal',
-fn: function (){
+fn: function () {
 var self=this;
 var result,delimiter;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -2018,7 +2018,7 @@ $core.addMethod(
 $core.method({
 selector: "parseSymbol",
 protocol: 'parsing-internal',
-fn: function (){
+fn: function () {
 var self=this;
 var string;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -2096,7 +2096,7 @@ $core.addMethod(
 $core.method({
 selector: "parseValue",
 protocol: 'parsing',
-fn: function (){
+fn: function () {
 var self=this;
 var char;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -2208,7 +2208,7 @@ $core.addMethod(
 $core.method({
 selector: "processSubObjectsOf:",
 protocol: 'private',
-fn: function (object){
+fn: function (object) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2247,7 +2247,7 @@ $core.addMethod(
 $core.method({
 selector: "resolveReference:",
 protocol: 'private',
-fn: function (reference){
+fn: function (reference) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2272,7 +2272,7 @@ $core.addMethod(
 $core.method({
 selector: "resolveReferenceIndex:",
 protocol: 'private',
-fn: function (index){
+fn: function (index) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2297,7 +2297,7 @@ $core.addMethod(
 $core.method({
 selector: "setReference:to:",
 protocol: 'private',
-fn: function (reference,object){
+fn: function (reference, object) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2321,7 +2321,7 @@ $core.addMethod(
 $core.method({
 selector: "storeReference:",
 protocol: 'private',
-fn: function (object){
+fn: function (object) {
 var self=this;
 var index;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -2349,7 +2349,7 @@ $core.addMethod(
 $core.method({
 selector: "stringStreamContents:",
 protocol: 'private',
-fn: function (block){
+fn: function (block) {
 var self=this;
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -2385,7 +2385,7 @@ $core.addMethod(
 $core.method({
 selector: "on:",
 protocol: 'instance creation',
-fn: function (readStream){
+fn: function (readStream) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2424,7 +2424,7 @@ $core.addMethod(
 $core.method({
 selector: "=",
 protocol: 'comparing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2466,7 +2466,7 @@ $core.addMethod(
 $core.method({
 selector: "hash",
 protocol: 'comparing',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2491,7 +2491,7 @@ $core.addMethod(
 $core.method({
 selector: "index",
 protocol: 'accessing',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@index"];
@@ -2511,7 +2511,7 @@ $core.addMethod(
 $core.method({
 selector: "index:",
 protocol: 'accessing',
-fn: function (integer){
+fn: function (integer) {
 var self=this;
 self["@index"]=integer;
 return self;
@@ -2530,7 +2530,7 @@ $core.addMethod(
 $core.method({
 selector: "isStonReference",
 protocol: 'testing',
-fn: function (){
+fn: function () {
 var self=this;
 return true;
 
@@ -2549,7 +2549,7 @@ $core.addMethod(
 $core.method({
 selector: "index:",
 protocol: 'instance creation',
-fn: function (integer){
+fn: function (integer) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2582,7 +2582,7 @@ $core.addMethod(
 $core.method({
 selector: "initialize",
 protocol: 'initialize-release',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2614,7 +2614,7 @@ $core.addMethod(
 $core.method({
 selector: "on:",
 protocol: 'initialize-release',
-fn: function (stonWriter){
+fn: function (stonWriter) {
 var self=this;
 self["@writer"]=stonWriter;
 return self;
@@ -2634,7 +2634,7 @@ $core.addMethod(
 $core.method({
 selector: "on:",
 protocol: 'instance creation',
-fn: function (stonWriter){
+fn: function (stonWriter) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2667,7 +2667,7 @@ $core.addMethod(
 $core.method({
 selector: "add:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2705,7 +2705,7 @@ $core.addMethod(
 $core.method({
 selector: "add:",
 protocol: 'accessing',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2743,7 +2743,7 @@ $core.addMethod(
 $core.method({
 selector: "at:put:",
 protocol: 'accessing',
-fn: function (key,value){
+fn: function (key, value) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2781,7 +2781,7 @@ $core.addMethod(
 $core.method({
 selector: "close",
 protocol: 'initialize-release',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2813,7 +2813,7 @@ $core.addMethod(
 $core.method({
 selector: "encodeCharacter:",
 protocol: 'private',
-fn: function (char){
+fn: function (char) {
 var self=this;
 var code,encoding;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -2866,7 +2866,7 @@ $core.addMethod(
 $core.method({
 selector: "encodeKey:value:",
 protocol: 'private',
-fn: function (key,value){
+fn: function (key, value) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2903,7 +2903,7 @@ $core.addMethod(
 $core.method({
 selector: "encodeList:",
 protocol: 'writing',
-fn: function (elements){
+fn: function (elements) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -2970,7 +2970,7 @@ $core.addMethod(
 $core.method({
 selector: "encodeMap:",
 protocol: 'writing',
-fn: function (pairs){
+fn: function (pairs) {
 var self=this;
 var first;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -3035,7 +3035,7 @@ $core.addMethod(
 $core.method({
 selector: "encodeString:",
 protocol: 'private',
-fn: function (string){
+fn: function (string) {
 var self=this;
 var encodedString;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -3089,7 +3089,7 @@ $core.addMethod(
 $core.method({
 selector: "indentedDo:",
 protocol: 'private',
-fn: function (block){
+fn: function (block) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3115,7 +3115,7 @@ $core.addMethod(
 $core.method({
 selector: "initialize",
 protocol: 'initialize-release',
-fn: function (){
+fn: function () {
 var self=this;
 function $Dictionary(){return $globals.Dictionary||(typeof Dictionary=="undefined"?nil:Dictionary)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -3152,7 +3152,7 @@ $core.addMethod(
 $core.method({
 selector: "isSimpleSymbol:",
 protocol: 'private',
-fn: function (symbol){
+fn: function (symbol) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3182,7 +3182,7 @@ $core.addMethod(
 $core.method({
 selector: "jsonMode:",
 protocol: 'initialize-release',
-fn: function (boolean){
+fn: function (boolean) {
 var self=this;
 self["@jsonMode"]=boolean;
 return self;
@@ -3201,7 +3201,7 @@ $core.addMethod(
 $core.method({
 selector: "listElementSeparator",
 protocol: 'private',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3226,7 +3226,7 @@ $core.addMethod(
 $core.method({
 selector: "mapElementSeparator",
 protocol: 'private',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3251,7 +3251,7 @@ $core.addMethod(
 $core.method({
 selector: "newlineIndent",
 protocol: 'private',
-fn: function (){
+fn: function () {
 var self=this;
 function $Character(){return $globals.Character||(typeof Character=="undefined"?nil:Character)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -3289,7 +3289,7 @@ $core.addMethod(
 $core.method({
 selector: "nextPut:",
 protocol: 'public',
-fn: function (anObject){
+fn: function (anObject) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3313,7 +3313,7 @@ $core.addMethod(
 $core.method({
 selector: "on:",
 protocol: 'initialize-release',
-fn: function (aWriteStream){
+fn: function (aWriteStream) {
 var self=this;
 self["@writeStream"]=aWriteStream;
 return self;
@@ -3332,7 +3332,7 @@ $core.addMethod(
 $core.method({
 selector: "prettyPrint:",
 protocol: 'initialize-release',
-fn: function (boolean){
+fn: function (boolean) {
 var self=this;
 self["@prettyPrint"]=boolean;
 return self;
@@ -3351,7 +3351,7 @@ $core.addMethod(
 $core.method({
 selector: "prettyPrintSpace",
 protocol: 'private',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3379,7 +3379,7 @@ $core.addMethod(
 $core.method({
 selector: "referencePolicy:",
 protocol: 'initialize-release',
-fn: function (policy){
+fn: function (policy) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3404,7 +3404,7 @@ $core.addMethod(
 $core.method({
 selector: "reset",
 protocol: 'initialize-release',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3428,7 +3428,7 @@ $core.addMethod(
 $core.method({
 selector: "shortListElementSeparator",
 protocol: 'private',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3453,7 +3453,7 @@ $core.addMethod(
 $core.method({
 selector: "with:do:",
 protocol: 'private',
-fn: function (object,block){
+fn: function (object, block) {
 var self=this;
 var index;
 function $STONWriterError(){return $globals.STONWriterError||(typeof STONWriterError=="undefined"?nil:STONWriterError)}
@@ -3507,9 +3507,33 @@ $globals.STONWriter);
 
 $core.addMethod(
 $core.method({
+selector: "writeAssociation:",
+protocol: 'writing',
+fn: function (association) {
+var self=this;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx1) {
+//>>excludeEnd("ctx");
+self._encodeKey_value_($recv(association)._key(),$recv(association)._value());
+return self;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx1) {$ctx1.fill(self,"writeAssociation:",{association:association},$globals.STONWriter)});
+//>>excludeEnd("ctx");
+},
+//>>excludeStart("ide", pragmas.excludeIdeData);
+args: ["association"],
+source: "writeAssociation: association\x0a\x09self \x0a\x09\x09encodeKey: association key\x0a\x09\x09value: association value",
+referencedClasses: [],
+//>>excludeEnd("ide");
+messageSends: ["encodeKey:value:", "key", "value"]
+}),
+$globals.STONWriter);
+
+$core.addMethod(
+$core.method({
 selector: "writeBoolean:",
 protocol: 'writing',
-fn: function (boolean){
+fn: function (boolean) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3533,7 +3557,7 @@ $core.addMethod(
 $core.method({
 selector: "writeFloat:",
 protocol: 'writing',
-fn: function (float){
+fn: function (float) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3557,7 +3581,7 @@ $core.addMethod(
 $core.method({
 selector: "writeInteger:",
 protocol: 'writing',
-fn: function (integer){
+fn: function (integer) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3581,7 +3605,7 @@ $core.addMethod(
 $core.method({
 selector: "writeList:",
 protocol: 'writing',
-fn: function (collection){
+fn: function (collection) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3613,7 +3637,7 @@ $core.addMethod(
 $core.method({
 selector: "writeMap:",
 protocol: 'writing',
-fn: function (hashedCollection){
+fn: function (hashedCollection) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3645,7 +3669,7 @@ $core.addMethod(
 $core.method({
 selector: "writeNull",
 protocol: 'writing',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3675,7 +3699,7 @@ $core.addMethod(
 $core.method({
 selector: "writeObject:do:",
 protocol: 'writing',
-fn: function (anObject,block){
+fn: function (anObject, block) {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 function $STONWriterError(){return $globals.STONWriterError||(typeof STONWriterError=="undefined"?nil:STONWriterError)}
@@ -3747,7 +3771,7 @@ $core.addMethod(
 $core.method({
 selector: "writeObject:listSingleton:",
 protocol: 'writing',
-fn: function (object,element){
+fn: function (object, element) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3794,7 +3818,7 @@ $core.addMethod(
 $core.method({
 selector: "writeObject:streamList:",
 protocol: 'writing',
-fn: function (object,block){
+fn: function (object, block) {
 var self=this;
 function $STONListWriter(){return $globals.STONListWriter||(typeof STONListWriter=="undefined"?nil:STONListWriter)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -3848,7 +3872,7 @@ $core.addMethod(
 $core.method({
 selector: "writeObject:streamMap:",
 protocol: 'writing',
-fn: function (object,block){
+fn: function (object, block) {
 var self=this;
 function $STONMapWriter(){return $globals.STONMapWriter||(typeof STONMapWriter=="undefined"?nil:STONMapWriter)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -3902,7 +3926,7 @@ $core.addMethod(
 $core.method({
 selector: "writeObject:streamShortList:",
 protocol: 'writing',
-fn: function (object,block){
+fn: function (object, block) {
 var self=this;
 function $STONShortListWriter(){return $globals.STONShortListWriter||(typeof STONShortListWriter=="undefined"?nil:STONShortListWriter)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -3956,7 +3980,7 @@ $core.addMethod(
 $core.method({
 selector: "writeReference:",
 protocol: 'writing',
-fn: function (index){
+fn: function (index) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -3983,7 +4007,7 @@ $core.addMethod(
 $core.method({
 selector: "writeString:",
 protocol: 'writing',
-fn: function (string){
+fn: function (string) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4007,7 +4031,7 @@ $core.addMethod(
 $core.method({
 selector: "writeSymbol:",
 protocol: 'writing',
-fn: function (symbol){
+fn: function (symbol) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4045,7 +4069,7 @@ $core.addMethod(
 $core.method({
 selector: "initialize",
 protocol: 'class initialization',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4070,7 +4094,7 @@ $core.addMethod(
 $core.method({
 selector: "initializeSTONCharacters",
 protocol: 'class initialization',
-fn: function (){
+fn: function () {
 var self=this;
 var escapes;
 function $Array(){return $globals.Array||(typeof Array=="undefined"?nil:Array)}
@@ -4133,7 +4157,7 @@ $core.addMethod(
 $core.method({
 selector: "initializeSTONSimpleSymbolCharacters",
 protocol: 'class initialization',
-fn: function (){
+fn: function () {
 var self=this;
 function $Array(){return $globals.Array||(typeof Array=="undefined"?nil:Array)}
 function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
@@ -4180,7 +4204,7 @@ $core.addMethod(
 $core.method({
 selector: "isSimpleSymbolChar:",
 protocol: 'private',
-fn: function (char){
+fn: function (char) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4205,7 +4229,7 @@ $core.addMethod(
 $core.method({
 selector: "on:",
 protocol: 'instance creation',
-fn: function (writeStream){
+fn: function (writeStream) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4233,7 +4257,7 @@ $core.addMethod(
 $core.method({
 selector: "stonCharacters",
 protocol: 'class initialization',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@STONCharacters"];
@@ -4253,7 +4277,7 @@ $core.addMethod(
 $core.method({
 selector: "stonSimpleSymbolCharacters",
 protocol: 'class initialization',
-fn: function (){
+fn: function () {
 var self=this;
 var $1;
 $1=self["@STONSimpleSymbolCharacters"];
@@ -4279,7 +4303,31 @@ $core.addMethod(
 $core.method({
 selector: "stonOn:",
 protocol: '*STON-Core',
-fn: function (stonWriter){
+fn: function (stonWriter) {
+var self=this;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx1) {
+//>>excludeEnd("ctx");
+$recv(stonWriter)._writeAssociation_(self);
+return self;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx1) {$ctx1.fill(self,"stonOn:",{stonWriter:stonWriter},$globals.Association)});
+//>>excludeEnd("ctx");
+},
+//>>excludeStart("ide", pragmas.excludeIdeData);
+args: ["stonWriter"],
+source: "stonOn: stonWriter\x0a\x09stonWriter writeAssociation: self",
+referencedClasses: [],
+//>>excludeEnd("ide");
+messageSends: ["writeAssociation:"]
+}),
+$globals.Association);
+
+$core.addMethod(
+$core.method({
+selector: "stonOn:",
+protocol: '*STON-Core',
+fn: function (stonWriter) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4303,7 +4351,7 @@ $core.addMethod(
 $core.method({
 selector: "stonProcessSubObjects:",
 protocol: '*STON-Core',
-fn: function (block){
+fn: function (block) {
 var self=this;
 return self;
 
@@ -4321,7 +4369,7 @@ $core.addMethod(
 $core.method({
 selector: "stonName",
 protocol: '*STON-Core',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4346,7 +4394,7 @@ $core.addMethod(
 $core.method({
 selector: "stonOn:",
 protocol: '*STON-Core',
-fn: function (stonWriter){
+fn: function (stonWriter) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4378,7 +4426,7 @@ $core.addMethod(
 $core.method({
 selector: "stonOn:",
 protocol: '*STON-Core',
-fn: function (stonWriter){
+fn: function (stonWriter) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4402,7 +4450,7 @@ $core.addMethod(
 $core.method({
 selector: "stonProcessSubObjects:",
 protocol: '*STON-Core',
-fn: function (block){
+fn: function (block) {
 var self=this;
 return self;
 
@@ -4420,7 +4468,7 @@ $core.addMethod(
 $core.method({
 selector: "stonOn:",
 protocol: '*STON-Core',
-fn: function (stonWriter){
+fn: function (stonWriter) {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -4459,7 +4507,7 @@ $core.addMethod(
 $core.method({
 selector: "stonOn:",
 protocol: '*STON-Core',
-fn: function (stonWriter){
+fn: function (stonWriter) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4483,7 +4531,7 @@ $core.addMethod(
 $core.method({
 selector: "stonProcessSubObjects:",
 protocol: '*STON-Core',
-fn: function (block){
+fn: function (block) {
 var self=this;
 return self;
 
@@ -4501,7 +4549,7 @@ $core.addMethod(
 $core.method({
 selector: "fromSton:",
 protocol: '*STON-Core',
-fn: function (stonReader){
+fn: function (stonReader) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4539,7 +4587,7 @@ $core.addMethod(
 $core.method({
 selector: "isStonReference",
 protocol: '*STON-Core',
-fn: function (){
+fn: function () {
 var self=this;
 return false;
 
@@ -4557,7 +4605,7 @@ $core.addMethod(
 $core.method({
 selector: "stonOn:",
 protocol: '*STON-Core',
-fn: function (stonWriter){
+fn: function (stonWriter) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4597,7 +4645,7 @@ $core.addMethod(
 $core.method({
 selector: "stonProcessSubObjects:",
 protocol: '*STON-Core',
-fn: function (block){
+fn: function (block) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4667,7 +4715,7 @@ $core.addMethod(
 $core.method({
 selector: "fromSton:",
 protocol: '*STON-Core',
-fn: function (stonReader){
+fn: function (stonReader) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4712,7 +4760,7 @@ $core.addMethod(
 $core.method({
 selector: "stonOn:",
 protocol: '*STON-Core',
-fn: function (stonWriter){
+fn: function (stonWriter) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4750,7 +4798,7 @@ $core.addMethod(
 $core.method({
 selector: "stonOn:",
 protocol: '*STON-Core',
-fn: function (stonWriter){
+fn: function (stonWriter) {
 var self=this;
 function $STON(){return $globals.STON||(typeof STON=="undefined"?nil:STON)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -4788,7 +4836,7 @@ $core.addMethod(
 $core.method({
 selector: "isSeparator",
 protocol: '*STON-Core',
-fn: function (){
+fn: function () {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4813,7 +4861,7 @@ $core.addMethod(
 $core.method({
 selector: "stonOn:",
 protocol: '*STON-Core',
-fn: function (stonWriter){
+fn: function (stonWriter) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4837,7 +4885,7 @@ $core.addMethod(
 $core.method({
 selector: "stonProcessSubObjects:",
 protocol: '*STON-Core',
-fn: function (block){
+fn: function (block) {
 var self=this;
 return self;
 
@@ -4855,7 +4903,7 @@ $core.addMethod(
 $core.method({
 selector: "stonOn:",
 protocol: '*STON-Core',
-fn: function (stonWriter){
+fn: function (stonWriter) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
@@ -4879,7 +4927,7 @@ $core.addMethod(
 $core.method({
 selector: "stonProcessSubObjects:",
 protocol: '*STON-Core',
-fn: function (block){
+fn: function (block) {
 var self=this;
 return self;
 

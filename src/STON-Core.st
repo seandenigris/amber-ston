@@ -891,6 +891,12 @@ encodeMap: pairs
 	writeStream nextPut: $}
 !
 
+writeAssociation: association
+	self 
+		encodeKey: association key
+		value: association value
+!
+
 writeBoolean: boolean
 	boolean printOn: writeStream
 !
@@ -1055,6 +1061,12 @@ Error subclass: #STONWriterError
 	package: 'STON-Core'!
 !STONWriterError commentStamp!
 STONWriterError is the error/exception signalled by STONWriter when illegal/incorrect input is seen.!
+
+!Association methodsFor: '*STON-Core'!
+
+stonOn: stonWriter
+	stonWriter writeAssociation: self
+! !
 
 !Boolean methodsFor: '*STON-Core'!
 
