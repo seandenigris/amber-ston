@@ -6427,7 +6427,7 @@ self._assert_($5);
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 $ctx1.sendIdx["assert:"]=2;
 //>>excludeEnd("ctx");
-self._assert_($recv(self._serialize_($recv($recv($STON())._listClass())._withAll_([(1),(-1),(0),"foo","a b c",true,false,nil]))).__eq("[1,-1,0,#foo,'a b c',true,false,nil]"));
+self._assert_($recv(self._serialize_($recv($recv($STON())._listClass())._withAll_([(1),(-1),(0),"foo","a b c",true,false,nil]))).__eq("[1,-1,0,'foo','a b c',true,false,nil]"));
 return self;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 }, function($ctx1) {$ctx1.fill(self,"testList",{},$globals.STONWriterTests)});
@@ -6435,7 +6435,7 @@ return self;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "testList\x0a\x09self assert: (self serialize: (STON listClass withAll: #(1 2 3))) = '[1,2,3]'.\x0a\x09self assert: (self serialize: STON listClass new) = '[]'.\x0a\x09self assert: (self serialize: (STON listClass withAll: { 1. -1. 0. #foo. 'a b c'. true. false. nil })) = '[1,-1,0,#foo,''a b c'',true,false,nil]'",
+source: "testList\x0a\x09self assert: (self serialize: (STON listClass withAll: #(1 2 3))) = '[1,2,3]'.\x0a\x09self assert: (self serialize: STON listClass new) = '[]'.\x0a\x09self assert: (self serialize: (STON listClass withAll: { 1. -1. 0. #foo. 'a b c'. true. false. nil })) = '[1,-1,0,''foo'',''a b c'',true,false,nil]'",
 referencedClasses: ["STON"],
 //>>excludeEnd("ide");
 messageSends: ["assert:", "=", "serialize:", "withAll:", "listClass", "new"]
