@@ -4466,6 +4466,78 @@ $globals.Date);
 
 $core.addMethod(
 $core.method({
+selector: "yyyymmdd",
+protocol: '*STON-Core',
+fn: function () {
+var self=this;
+function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx1) {
+//>>excludeEnd("ctx");
+var $3,$2,$5,$4,$1;
+$1=$recv($String())._streamContents_((function(aStream){
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx2) {
+//>>excludeEnd("ctx");
+$recv(self._year())._printOn_(aStream);
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+$ctx2.sendIdx["printOn:"]=1;
+//>>excludeEnd("ctx");
+$recv(aStream)._nextPut_("-");
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+$ctx2.sendIdx["nextPut:"]=1;
+//>>excludeEnd("ctx");
+$3=self._month();
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+$ctx2.sendIdx["month"]=1;
+//>>excludeEnd("ctx");
+$2=$recv($3).__lt((10));
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+$ctx2.sendIdx["<"]=1;
+//>>excludeEnd("ctx");
+if($core.assert($2)){
+$recv(aStream)._nextPut_("0");
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+$ctx2.sendIdx["nextPut:"]=2;
+//>>excludeEnd("ctx");
+};
+$recv(self._month())._printOn_(aStream);
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+$ctx2.sendIdx["printOn:"]=2;
+//>>excludeEnd("ctx");
+$recv(aStream)._nextPut_("-");
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+$ctx2.sendIdx["nextPut:"]=3;
+//>>excludeEnd("ctx");
+$5=self._day();
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+$ctx2.sendIdx["day"]=1;
+//>>excludeEnd("ctx");
+$4=$recv($5).__lt((10));
+if($core.assert($4)){
+$recv(aStream)._nextPut_("0");
+};
+return $recv(self._day())._printOn_(aStream);
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx2) {$ctx2.fillBlock({aStream:aStream},$ctx1,1)});
+//>>excludeEnd("ctx");
+}));
+return $1;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx1) {$ctx1.fill(self,"yyyymmdd",{},$globals.Date)});
+//>>excludeEnd("ctx");
+},
+//>>excludeStart("ide", pragmas.excludeIdeData);
+args: [],
+source: "yyyymmdd\x0a \x09\x22Format the date in ISO 8601 standard like '2002-10-22'\x0a\x09The result is of fixed size 10 characters long..\x22\x0a\x09^ String streamContents: [ :aStream |\x0a\x09\x09self year printOn: aStream.\x0a\x09\x09aStream nextPut: $-.\x0a\x09\x09self month < 10 ifTrue: [ aStream nextPut: $0].\x0a\x09\x09self month printOn: aStream.\x0a\x09\x09aStream nextPut: $-.\x0a\x09\x09self day < 10 ifTrue: [ aStream nextPut: $0].\x0a\x09\x09self day printOn: aStream.\x0a\x09]",
+referencedClasses: ["String"],
+//>>excludeEnd("ide");
+messageSends: ["streamContents:", "printOn:", "year", "nextPut:", "ifTrue:", "<", "month", "day"]
+}),
+$globals.Date);
+
+$core.addMethod(
+$core.method({
 selector: "stonOn:",
 protocol: '*STON-Core',
 fn: function (stonWriter) {

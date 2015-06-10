@@ -1101,6 +1101,20 @@ stonOn: stonWriter
 !
 
 stonProcessSubObjects: block
+!
+
+yyyymmdd
+ 	"Format the date in ISO 8601 standard like '2002-10-22'
+	The result is of fixed size 10 characters long.."
+	^ String streamContents: [ :aStream |
+		self year printOn: aStream.
+		aStream nextPut: $-.
+		self month < 10 ifTrue: [ aStream nextPut: $0].
+		self month printOn: aStream.
+		aStream nextPut: $-.
+		self day < 10 ifTrue: [ aStream nextPut: $0].
+		self day printOn: aStream.
+	]
 ! !
 
 !Dictionary methodsFor: '*STON-Core'!
