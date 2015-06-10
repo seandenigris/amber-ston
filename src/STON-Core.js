@@ -4509,15 +4509,15 @@ $recv(aStream)._nextPut_("-");
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 $ctx2.sendIdx["nextPut:"]=3;
 //>>excludeEnd("ctx");
-$5=self._day();
+$5=self._dayOfMonth();
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
-$ctx2.sendIdx["day"]=1;
+$ctx2.sendIdx["dayOfMonth"]=1;
 //>>excludeEnd("ctx");
 $4=$recv($5).__lt((10));
 if($core.assert($4)){
 $recv(aStream)._nextPut_("0");
 };
-return $recv(self._day())._printOn_(aStream);
+return $recv(self._dayOfMonth())._printOn_(aStream);
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 }, function($ctx2) {$ctx2.fillBlock({aStream:aStream},$ctx1,1)});
 //>>excludeEnd("ctx");
@@ -4529,10 +4529,10 @@ return $1;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "yyyymmdd\x0a \x09\x22Format the date in ISO 8601 standard like '2002-10-22'\x0a\x09The result is of fixed size 10 characters long..\x22\x0a\x09^ String streamContents: [ :aStream |\x0a\x09\x09self year printOn: aStream.\x0a\x09\x09aStream nextPut: $-.\x0a\x09\x09self month < 10 ifTrue: [ aStream nextPut: $0].\x0a\x09\x09self month printOn: aStream.\x0a\x09\x09aStream nextPut: $-.\x0a\x09\x09self day < 10 ifTrue: [ aStream nextPut: $0].\x0a\x09\x09self day printOn: aStream.\x0a\x09]",
+source: "yyyymmdd\x0a \x09\x22Format the date in ISO 8601 standard like '2002-10-22'\x0a\x09The result is of fixed size 10 characters long..\x22\x0a\x09^ String streamContents: [ :aStream |\x0a\x09\x09self year printOn: aStream.\x0a\x09\x09aStream nextPut: $-.\x0a\x09\x09self month < 10 ifTrue: [ aStream nextPut: $0].\x0a\x09\x09self month printOn: aStream.\x0a\x09\x09aStream nextPut: $-.\x0a\x09\x09self dayOfMonth < 10 ifTrue: [ aStream nextPut: $0].\x0a\x09\x09self dayOfMonth printOn: aStream.\x0a\x09]",
 referencedClasses: ["String"],
 //>>excludeEnd("ide");
-messageSends: ["streamContents:", "printOn:", "year", "nextPut:", "ifTrue:", "<", "month", "day"]
+messageSends: ["streamContents:", "printOn:", "year", "nextPut:", "ifTrue:", "<", "month", "dayOfMonth"]
 }),
 $globals.Date);
 

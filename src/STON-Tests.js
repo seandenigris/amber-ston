@@ -5569,8 +5569,8 @@ function $Date(){return $globals.Date||(typeof Date=="undefined"?nil:Date)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
-date=$recv($Date())._year_month_day_((2012),(1),(1));
-self._assert_($recv(self._serialize_(date)).__eq("Date['2012-01-01']"));
+date=$recv($Date())._fromString_("2012/01/30 00:00:00");
+self._assert_($recv(self._serialize_(date)).__eq("Date['2012-01-30']"));
 return self;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 }, function($ctx1) {$ctx1.fill(self,"testDate",{date:date},$globals.STONWriterTests)});
@@ -5578,10 +5578,10 @@ return self;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "testDate\x0a\x09| date |\x0a\x09date := Date year: 2012 month: 1 day: 1.\x0a\x09self assert: (self serialize: date) = 'Date[''2012-01-01'']'",
+source: "testDate\x0a\x09| date |\x0a\x09date := Date fromString: '2012/01/30 00:00:00'.\x0a\x09self assert: (self serialize: date) = 'Date[''2012-01-30'']'",
 referencedClasses: ["Date"],
 //>>excludeEnd("ide");
-messageSends: ["year:month:day:", "assert:", "=", "serialize:"]
+messageSends: ["fromString:", "assert:", "=", "serialize:"]
 }),
 $globals.STONWriterTests);
 
@@ -5596,7 +5596,7 @@ function $DateAndTime(){return $globals.DateAndTime||(typeof DateAndTime=="undef
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
-dateAndTime=$recv($DateAndTime())._year_month_day_hour_minute_second_offset_((2012),(1),(1),(6),(30),(15),(1)._hour());
+dateAndTime=$recv($DateAndTime())._fromString_("2012/11/01 06:30:15");
 self._assert_($recv(self._serialize_(dateAndTime)).__eq("DateAndTime['2012-01-01T06:30:15+01:00']"));
 return self;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -5605,10 +5605,10 @@ return self;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "testDateAndTime\x0a\x09| dateAndTime |\x0a\x09dateAndTime := DateAndTime year: 2012 month: 1 day: 1 hour: 6 minute: 30 second: 15 offset: 1 hour.\x0a\x09self assert: (self serialize: dateAndTime) = 'DateAndTime[''2012-01-01T06:30:15+01:00'']'",
+source: "testDateAndTime\x0a\x09| dateAndTime |\x0a\x09dateAndTime := DateAndTime fromString: '2012/11/01 06:30:15'.\x0a\x09self assert: (self serialize: dateAndTime) = 'DateAndTime[''2012-01-01T06:30:15+01:00'']'",
 referencedClasses: ["DateAndTime"],
 //>>excludeEnd("ide");
-messageSends: ["year:month:day:hour:minute:second:offset:", "hour", "assert:", "=", "serialize:"]
+messageSends: ["fromString:", "assert:", "=", "serialize:"]
 }),
 $globals.STONWriterTests);
 

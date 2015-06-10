@@ -1112,8 +1112,8 @@ yyyymmdd
 		self month < 10 ifTrue: [ aStream nextPut: $0].
 		self month printOn: aStream.
 		aStream nextPut: $-.
-		self day < 10 ifTrue: [ aStream nextPut: $0].
-		self day printOn: aStream.
+		self dayOfMonth < 10 ifTrue: [ aStream nextPut: $0].
+		self dayOfMonth printOn: aStream.
 	]
 ! !
 
