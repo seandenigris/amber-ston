@@ -250,7 +250,7 @@ return self;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "testByteArray\x0a\x09self assert: (self materialize: 'ByteArray[''010203'']') = #(1 2 3) asByteArray",
+source: "testByteArray\x0a\x09\x22No ByteArray in Amber yet\x22\x0a\x09self assert: (self materialize: 'ByteArray[''010203'']') = #(1 2 3) asByteArray",
 referencedClasses: [],
 //>>excludeEnd("ide");
 messageSends: ["assert:", "=", "materialize:", "asByteArray"]
@@ -447,8 +447,8 @@ function $Date(){return $globals.Date||(typeof Date=="undefined"?nil:Date)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
-date=$recv($Date())._year_month_day_((2012),(1),(1));
-self._assert_($recv(self._materialize_("Date['2012-01-01']")).__eq(date));
+date=$recv($Date())._fromString_("2012/01/30 00:00:00");
+self._assert_($recv(self._materialize_("Date['2012-01-30']")).__eq(date));
 return self;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 }, function($ctx1) {$ctx1.fill(self,"testDate",{date:date},$globals.STONReaderTests)});
@@ -456,10 +456,10 @@ return self;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "testDate\x0a\x09| date |\x0a\x09date := Date year: 2012 month: 1 day: 1.\x0a\x09self assert: (self materialize: 'Date[''2012-01-01'']') = date",
+source: "testDate\x0a\x09| date |\x0a\x09date :=  Date fromString: '2012/01/30 00:00:00'.\x0a\x09self assert: (self materialize: 'Date[''2012-01-30'']') = date",
 referencedClasses: ["Date"],
 //>>excludeEnd("ide");
-messageSends: ["year:month:day:", "assert:", "=", "materialize:"]
+messageSends: ["fromString:", "assert:", "=", "materialize:"]
 }),
 $globals.STONReaderTests);
 
@@ -5605,7 +5605,7 @@ return self;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "testDateAndTime\x0a\x09| dateAndTime |\x0a\x09dateAndTime := DateAndTime fromString: '2012/11/01 06:30:15'.\x0a\x09self assert: (self serialize: dateAndTime) = 'DateAndTime[''2012-01-01T06:30:15+01:00'']'",
+source: "testDateAndTime\x0a\x09\x22DateAndTime is just a Date in Amber\x22\x0a\x09| dateAndTime |\x0a\x09dateAndTime := DateAndTime fromString: '2012/11/01 06:30:15'.\x0a\x09self assert: (self serialize: dateAndTime) = 'DateAndTime[''2012-01-01T06:30:15+01:00'']'",
 referencedClasses: ["DateAndTime"],
 //>>excludeEnd("ide");
 messageSends: ["fromString:", "assert:", "=", "serialize:"]
