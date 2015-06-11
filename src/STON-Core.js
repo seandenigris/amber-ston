@@ -1361,7 +1361,7 @@ return $recv(self["@readStream"])._atEnd();
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx2) {
 //>>excludeEnd("ctx");
-$recv(block)._cull_cull_(self._parseValue(),index);
+$recv(block)._value_value_(self._parseValue(),index);
 $2=self._matchChar_("]");
 if($core.assert($2)){
 throw $early=[self];
@@ -1383,10 +1383,10 @@ catch(e) {if(e===$early)return e[0]; throw e}
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: ["block"],
-source: "parseListDo: block\x0a\x09| index |\x0a\x09self expectChar: $[.\x0a\x09(self matchChar: $]) \x0a\x09\x09ifTrue: [ ^ self ].\x0a\x09index := 1.\x0a\x09[ readStream atEnd ] whileFalse: [\x0a\x09\x09block cull: self parseValue cull: index.\x0a\x09\x09(self matchChar: $]) \x0a\x09\x09\x09ifTrue: [ ^ self ].\x0a\x09\x09index := index + 1.\x0a\x09\x09self expectChar: $, ].\x0a\x09self error: 'end of list expected'",
+source: "parseListDo: block\x0a\x09| index |\x0a\x09self expectChar: $[.\x0a\x09(self matchChar: $]) \x0a\x09\x09ifTrue: [ ^ self ].\x0a\x09index := 1.\x0a\x09[ readStream atEnd ] whileFalse: [\x0a\x09\x09block value: self parseValue value: index.\x0a\x09\x09(self matchChar: $]) \x0a\x09\x09\x09ifTrue: [ ^ self ].\x0a\x09\x09index := index + 1.\x0a\x09\x09self expectChar: $, ].\x0a\x09self error: 'end of list expected'",
 referencedClasses: [],
 //>>excludeEnd("ide");
-messageSends: ["expectChar:", "ifTrue:", "matchChar:", "whileFalse:", "atEnd", "cull:cull:", "parseValue", "+", "error:"]
+messageSends: ["expectChar:", "ifTrue:", "matchChar:", "whileFalse:", "atEnd", "value:value:", "parseValue", "+", "error:"]
 }),
 $globals.STONReader);
 
@@ -1999,7 +1999,7 @@ return $recv(stream)._nextPut_(self._parseCharacter());
 //>>excludeEnd("ctx");
 }));
 self._expectChar_(delimiter);
-$3=$recv(result)._convertFromEncoding_("utf-8");
+$3=result;
 return $3;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 }, function($ctx1) {$ctx1.fill(self,"parseStringInternal",{result:result,delimiter:delimiter},$globals.STONReader)});
@@ -2007,10 +2007,10 @@ return $3;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "parseStringInternal\x0a  | result delimiter |\x0a  delimiter := readStream next.\x0a  (delimiter = $' or: [ delimiter = $\x22 ])\x0a    ifFalse: [ self error: ''' or \x22 expected' ].\x0a  result := self\x0a    stringStreamContents: [ :stream | [ readStream atEnd or: [ readStream peek = delimiter ] ] whileFalse: [ stream nextPut: self parseCharacter ] ].\x0a  self expectChar: delimiter.\x0a  ^ result convertFromEncoding: #'utf-8'",
+source: "parseStringInternal\x0a  | result delimiter |\x0a  delimiter := readStream next.\x0a  (delimiter = $' or: [ delimiter = $\x22 ])\x0a    ifFalse: [ self error: ''' or \x22 expected' ].\x0a  result := self\x0a    stringStreamContents: [ :stream | [ readStream atEnd or: [ readStream peek = delimiter ] ] whileFalse: [ stream nextPut: self parseCharacter ] ].\x0a  self expectChar: delimiter.\x0a  \x22Needs to be tested with UTF8 chars and include the proper decoding\x22\x0a  ^ result",
 referencedClasses: [],
 //>>excludeEnd("ide");
-messageSends: ["next", "ifFalse:", "or:", "=", "error:", "stringStreamContents:", "whileFalse:", "atEnd", "peek", "nextPut:", "parseCharacter", "expectChar:", "convertFromEncoding:"]
+messageSends: ["next", "ifFalse:", "or:", "=", "error:", "stringStreamContents:", "whileFalse:", "atEnd", "peek", "nextPut:", "parseCharacter", "expectChar:"]
 }),
 $globals.STONReader);
 
@@ -4538,6 +4538,33 @@ $globals.Date);
 
 $core.addMethod(
 $core.method({
+selector: "fromSton:",
+protocol: '*STON-Core',
+fn: function (stonReader) {
+var self=this;
+var stream;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx1) {
+//>>excludeEnd("ctx");
+var $1;
+stream=$recv($recv(stonReader)._parseListSingleton())._readStream();
+$1=self._fromString_($recv($recv(stream)._contents())._replace_with_("-","/"));
+return $1;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx1) {$ctx1.fill(self,"fromSton:",{stonReader:stonReader,stream:stream},$globals.Date.klass)});
+//>>excludeEnd("ctx");
+},
+//>>excludeStart("ide", pragmas.excludeIdeData);
+args: ["stonReader"],
+source: "fromSton: stonReader\x0a\x09| stream |\x0a\x09(stream := stonReader parseListSingleton readStream).\x0a\x09^ self fromString: (stream contents replace: '-' with: '/')",
+referencedClasses: [],
+//>>excludeEnd("ide");
+messageSends: ["readStream", "parseListSingleton", "fromString:", "replace:with:", "contents"]
+}),
+$globals.Date.klass);
+
+$core.addMethod(
+$core.method({
 selector: "stonOn:",
 protocol: '*STON-Core',
 fn: function (stonWriter) {
@@ -4626,21 +4653,15 @@ var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
-var $1;
-$1=$recv(self._class())._isVariable();
-if($core.assert($1)){
-self._subclassResponsibility();
-} else {
 $recv(stonReader)._parseMapDo_((function(instVarName,value){
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx2) {
 //>>excludeEnd("ctx");
 return self._instVarNamed_put_(instVarName,value);
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
-}, function($ctx2) {$ctx2.fillBlock({instVarName:instVarName,value:value},$ctx1,3)});
+}, function($ctx2) {$ctx2.fillBlock({instVarName:instVarName,value:value},$ctx1,1)});
 //>>excludeEnd("ctx");
 }));
-};
 return self;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 }, function($ctx1) {$ctx1.fill(self,"fromSton:",{stonReader:stonReader},$globals.Object)});
@@ -4648,10 +4669,10 @@ return self;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: ["stonReader"],
-source: "fromSton: stonReader\x0a\x09\x22Decode non-variable classes from a map of their instance variables and values.\x0a\x09Override to customize and add a mathcing #toSton: (see implementors).\x22\x0a\x09\x0a\x09self class isVariable \x0a\x09\x09ifTrue: [\x0a\x09\x09\x09self subclassResponsibility ]\x0a\x09\x09ifFalse: [\x0a\x09\x09\x09stonReader parseMapDo: [ :instVarName :value |\x0a\x09\x09\x09\x09self instVarNamed: instVarName put: value ] ]",
+source: "fromSton: stonReader\x0a\x09\x22Decode non-variable classes from a map of their instance variables and values.\x0a\x09Override to customize and add a mathcing #toSton: (see implementors).\x22\x0a\x09stonReader parseMapDo: [ :instVarName :value |\x0a\x09\x09\x09self instVarNamed: instVarName put: value ] ",
 referencedClasses: [],
 //>>excludeEnd("ide");
-messageSends: ["ifTrue:ifFalse:", "isVariable", "class", "subclassResponsibility", "parseMapDo:", "instVarNamed:put:"]
+messageSends: ["parseMapDo:", "instVarNamed:put:"]
 }),
 $globals.Object);
 

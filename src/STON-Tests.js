@@ -189,7 +189,7 @@ return self;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "testAssociation\x0a\x09self assert: (self materialize: '''foo'':1') = ('foo' -> 1).\x0a\x09self assert: (self materialize: '#bar:2') = (#bar -> 2).\x0a\x09self assert: (self materialize: '''foo bar'':#ok') = ('foo bar' -> #ok).\x0a\x09self assert: (self materialize: '123:456') = (123 -> 456).\x0a\x09\x0a\x09self assert: (self materialize: '''foo'' : 1') = ('foo' -> 1).\x0a\x09self assert: (self materialize: '#bar : 2') = (#bar -> 2).\x0a\x09self assert: (self materialize: '''foo bar'' : #ok') = ('foo bar' -> #ok).\x0a\x09self assert: (self materialize: '123 : -456') = (123 -> -456).\x0a\x09\x0a\x09self assert: (self materialize: '#foo : 1 : 2') = (#foo -> (1 -> 2))",
+source: "testAssociation\x0a\x09self assert: (self materialize: '''foo'':1') = ('foo' -> 1).\x0a\x09self assert: (self materialize: '#bar:2') = ('bar' -> 2).\x0a\x09self assert: (self materialize: '''foo bar'':#ok') = ('foo bar' -> 'ok').\x0a\x09self assert: (self materialize: '123:456') = (123 -> 456).\x0a\x09\x0a\x09self assert: (self materialize: '''foo'' : 1') = ('foo' -> 1).\x0a\x09self assert: (self materialize: '#bar : 2') = ('bar' -> 2).\x0a\x09self assert: (self materialize: '''foo bar'' : #ok') = ('foo bar' -> 'ok').\x0a\x09self assert: (self materialize: '123 : -456') = (123 -> -456).\x0a\x09\x0a\x09self assert: (self materialize: '#foo : 1 : 2') = ('foo' -> (1 -> 2))",
 referencedClasses: [],
 //>>excludeEnd("ide");
 messageSends: ["assert:", "=", "materialize:", "->"]

@@ -222,7 +222,7 @@ parseListDo: block
 		ifTrue: [ ^ self ].
 	index := 1.
 	[ readStream atEnd ] whileFalse: [
-		block cull: self parseValue cull: index.
+		block value: self parseValue value: index.
 		(self matchChar: $]) 
 			ifTrue: [ ^ self ].
 		index := index + 1.
@@ -437,7 +437,8 @@ parseStringInternal
   result := self
     stringStreamContents: [ :stream | [ readStream atEnd or: [ readStream peek = delimiter ] ] whileFalse: [ stream nextPut: self parseCharacter ] ].
   self expectChar: delimiter.
-  ^ result convertFromEncoding: #'utf-8'
+  "Needs to be tested with UTF8 chars and include the proper decoding"
+  ^ result
 !
 
 parseSymbol
@@ -1117,6 +1118,14 @@ yyyymmdd
 	]
 ! !
 
+!Date class methodsFor: '*STON-Core'!
+
+fromSton: stonReader
+	| stream |
+	(stream := stonReader parseListSingleton readStream).
+	^ self fromString: (stream contents replace: '-' with: '/')
+! !
+
 !Dictionary methodsFor: '*STON-Core'!
 
 stonOn: stonWriter
@@ -1146,13 +1155,8 @@ stonProcessSubObjects: block
 fromSton: stonReader
 	"Decode non-variable classes from a map of their instance variables and values.
 	Override to customize and add a mathcing #toSton: (see implementors)."
-	
-	self class isVariable 
-		ifTrue: [
-			self subclassResponsibility ]
-		ifFalse: [
-			stonReader parseMapDo: [ :instVarName :value |
-				self instVarNamed: instVarName put: value ] ]
+	stonReader parseMapDo: [ :instVarName :value |
+			self instVarNamed: instVarName put: value ]
 !
 
 isStonReference
