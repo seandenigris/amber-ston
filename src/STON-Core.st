@@ -1095,6 +1095,10 @@ stonOn: stonWriter
 
 !Date methodsFor: '*STON-Core'!
 
+= aDate
+	^ (aDate isKindOf: Date) and: [ self time == aDate time ]
+!
+
 stonOn: stonWriter
 	"Use an ISO style YYYYMMDD representation"
 	
@@ -1204,8 +1208,14 @@ stonOn: stonWriter
 
 !String methodsFor: '*STON-Core'!
 
+isDigit
+	"From the smalltalk Character class. Answers true if the first character in the receiver is a digit"
+	| asciiValue |
+	^ (asciiValue := self asciiValue) >= 48 and: [asciiValue <= 57]
+!
+
 isSeparator
-	"Answer whether the receiver is one of the separator characters--space, 
+	"From the smalltalk Character class. Answer true if the first character in the receiver is one of the separator characters--space, 
 	cr, tab, line feed, or form feed."
 	^ #( 32 "space" 13 "cr" 9 "tab" 10 "lf" 12 "ff" ) includes: self asciiValue
 !

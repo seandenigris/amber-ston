@@ -4424,6 +4424,44 @@ $globals.Collection);
 
 $core.addMethod(
 $core.method({
+selector: "=",
+protocol: '*STON-Core',
+fn: function (aDate) {
+var self=this;
+function $Date(){return $globals.Date||(typeof Date=="undefined"?nil:Date)}
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx1) {
+//>>excludeEnd("ctx");
+var $2,$1;
+$1=$recv($recv(aDate)._isKindOf_($Date()))._and_((function(){
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx2) {
+//>>excludeEnd("ctx");
+$2=self._time();
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+$ctx2.sendIdx["time"]=1;
+//>>excludeEnd("ctx");
+return $recv($2).__eq_eq($recv(aDate)._time());
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx2) {$ctx2.fillBlock({},$ctx1,1)});
+//>>excludeEnd("ctx");
+}));
+return $1;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx1) {$ctx1.fill(self,"=",{aDate:aDate},$globals.Date)});
+//>>excludeEnd("ctx");
+},
+//>>excludeStart("ide", pragmas.excludeIdeData);
+args: ["aDate"],
+source: "= aDate\x0a\x09^ (aDate isKindOf: Date) and: [ self time == aDate time ]",
+referencedClasses: ["Date"],
+//>>excludeEnd("ide");
+messageSends: ["and:", "isKindOf:", "==", "time"]
+}),
+$globals.Date);
+
+$core.addMethod(
+$core.method({
 selector: "stonOn:",
 protocol: '*STON-Core',
 fn: function (stonWriter) {
@@ -4927,6 +4965,43 @@ $globals.SequenceableCollection);
 
 $core.addMethod(
 $core.method({
+selector: "isDigit",
+protocol: '*STON-Core',
+fn: function () {
+var self=this;
+var asciiValue;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx1) {
+//>>excludeEnd("ctx");
+var $3,$2,$1;
+asciiValue=self._asciiValue();
+$3=asciiValue;
+$2=$recv($3).__gt_eq((48));
+$1=$recv($2)._and_((function(){
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx2) {
+//>>excludeEnd("ctx");
+return $recv(asciiValue).__lt_eq((57));
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx2) {$ctx2.fillBlock({},$ctx1,1)});
+//>>excludeEnd("ctx");
+}));
+return $1;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx1) {$ctx1.fill(self,"isDigit",{asciiValue:asciiValue},$globals.String)});
+//>>excludeEnd("ctx");
+},
+//>>excludeStart("ide", pragmas.excludeIdeData);
+args: [],
+source: "isDigit\x0a\x09\x22From the smalltalk Character class. Answers true if the first character in the receiver is a digit\x22\x0a\x09| asciiValue |\x0a\x09^ (asciiValue := self asciiValue) >= 48 and: [asciiValue <= 57]",
+referencedClasses: [],
+//>>excludeEnd("ide");
+messageSends: ["and:", ">=", "asciiValue", "<="]
+}),
+$globals.String);
+
+$core.addMethod(
+$core.method({
 selector: "isSeparator",
 protocol: '*STON-Core',
 fn: function () {
@@ -4943,7 +5018,7 @@ return $1;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "isSeparator\x0a\x09\x22Answer whether the receiver is one of the separator characters--space, \x0a\x09cr, tab, line feed, or form feed.\x22\x0a\x09^ #( 32 \x22space\x22 13 \x22cr\x22 9 \x22tab\x22 10 \x22lf\x22 12 \x22ff\x22 ) includes: self asciiValue",
+source: "isSeparator\x0a\x09\x22From the smalltalk Character class. Answer true if the first character in the receiver is one of the separator characters--space, \x0a\x09cr, tab, line feed, or form feed.\x22\x0a\x09^ #( 32 \x22space\x22 13 \x22cr\x22 9 \x22tab\x22 10 \x22lf\x22 12 \x22ff\x22 ) includes: self asciiValue",
 referencedClasses: [],
 //>>excludeEnd("ide");
 messageSends: ["includes:", "asciiValue"]
