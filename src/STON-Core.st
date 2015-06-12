@@ -1221,7 +1221,10 @@ isSeparator
 !
 
 stonOn: stonWriter
-	stonWriter writeString: self
+	"Ugly hack for characters ie. String with only one character are considered Character instances - needs to be better considered"
+	self size == 1 
+		ifTrue: [ stonWriter writeCharacter: self ]
+		ifFalse: [ stonWriter writeString: self ]
 !
 
 stonProcessSubObjects: block

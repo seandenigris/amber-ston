@@ -5034,7 +5034,13 @@ var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
+var $1;
+$1=$recv(self._size()).__eq_eq((1));
+if($core.assert($1)){
+$recv(stonWriter)._writeCharacter_(self);
+} else {
 $recv(stonWriter)._writeString_(self);
+};
 return self;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 }, function($ctx1) {$ctx1.fill(self,"stonOn:",{stonWriter:stonWriter},$globals.String)});
@@ -5042,10 +5048,10 @@ return self;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: ["stonWriter"],
-source: "stonOn: stonWriter\x0a\x09stonWriter writeString: self",
+source: "stonOn: stonWriter\x0a\x09\x22Ugly hack for characters ie. String with only one character are considered Character instances - needs to be better considered\x22\x0a\x09self size == 1 \x0a\x09\x09ifTrue: [ stonWriter writeCharacter: self ]\x0a\x09\x09ifFalse: [ stonWriter writeString: self ]",
 referencedClasses: [],
 //>>excludeEnd("ide");
-messageSends: ["writeString:"]
+messageSends: ["ifTrue:ifFalse:", "==", "size", "writeCharacter:", "writeString:"]
 }),
 $globals.String);
 
