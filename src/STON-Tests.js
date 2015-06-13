@@ -6475,7 +6475,7 @@ $5=self._serialize_(map);
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 $ctx1.sendIdx["serialize:"]=1;
 //>>excludeEnd("ctx");
-$4=$recv($5).__eq("{#foo:1,#bar:2}");
+$4=$recv($5).__eq("{'foo':1,'bar':2}");
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 $ctx1.sendIdx["="]=1;
 //>>excludeEnd("ctx");
@@ -6507,7 +6507,7 @@ $9=self._serialize_(map);
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 $ctx1.sendIdx["serialize:"]=3;
 //>>excludeEnd("ctx");
-$8=$recv($9).__eq("{'foo bar':#ok}");
+$8=$recv($9).__eq("{'foo bar':'ok'}");
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 $ctx1.sendIdx["="]=3;
 //>>excludeEnd("ctx");
@@ -6525,7 +6525,7 @@ return self;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "testMap\x0a\x09| map |\x0a\x09(map := STON mapClass new)\x0a\x09\x09at: #foo put: 1;\x0a\x09\x09at: #bar put: 2.\x0a\x09self assert: (self serialize: map) = '{#foo:1,#bar:2}'.\x0a\x09self assert: (self serialize: STON mapClass new) = '{}'.\x0a\x09map removeAll.\x0a\x09map at: 'foo bar' put: #ok.\x0a\x09self assert: (self serialize: map) = '{''foo bar'':#ok}'.\x0a\x09map removeAll.\x0a\x09map at: 123 put: 456.\x0a\x09self assert: (self serialize: map) = '{123:456}'.",
+source: "testMap\x0a\x09| map |\x0a\x09(map := STON mapClass new)\x0a\x09\x09at: #foo put: 1;\x0a\x09\x09at: #bar put: 2.\x0a\x09self assert: (self serialize: map) = '{''foo'':1,''bar'':2}'.\x0a\x09self assert: (self serialize: STON mapClass new) = '{}'.\x0a\x09map removeAll.\x0a\x09map at: 'foo bar' put: #ok.\x0a\x09self assert: (self serialize: map) = '{''foo bar'':''ok''}'.\x0a\x09map removeAll.\x0a\x09map at: 123 put: 456.\x0a\x09self assert: (self serialize: map) = '{123:456}'.",
 referencedClasses: ["STON"],
 //>>excludeEnd("ide");
 messageSends: ["at:put:", "new", "mapClass", "assert:", "=", "serialize:", "removeAll"]

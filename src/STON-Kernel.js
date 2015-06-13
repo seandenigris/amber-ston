@@ -70,4 +70,28 @@ $globals.DateAndTime.klass);
 
 $core.addClass('IdentityDictionary', $globals.Dictionary, [], 'STON-Kernel');
 
+$core.addMethod(
+$core.method({
+selector: "fromString:",
+protocol: '*STON-Kernel',
+fn: function (aString) {
+var self=this;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx1) {
+//>>excludeEnd("ctx");
+return Number(aString);
+return self;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx1) {$ctx1.fill(self,"fromString:",{aString:aString},$globals.Number.klass)});
+//>>excludeEnd("ctx");
+},
+//>>excludeStart("ide", pragmas.excludeIdeData);
+args: ["aString"],
+source: "fromString: aString\x0a\x09<return Number(aString)>",
+referencedClasses: [],
+//>>excludeEnd("ide");
+messageSends: []
+}),
+$globals.Number.klass);
+
 });

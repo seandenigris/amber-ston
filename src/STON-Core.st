@@ -370,19 +370,12 @@ parseConstantDo: block
 !
 
 parseNumber
-	| negated number |
-	negated := readStream peek = $-.
-	negated ifTrue: [ readStream next ].
-	number := self parseNumberInteger.
-	(readStream peek = $.) ifTrue: [
-		readStream next. 
-		number := number + self parseNumberFraction ].
-	(readStream peek = $e or: [ readStream peek = $E ]) ifTrue: [
-		readStream next.
-		number := number * self parseNumberExponent ].
-	negated ifTrue: [ number := number negated ].
+	| numberStream number |
+	numberStream := StringStream on: String new.
+	[ readStream peek isDigit or: [ '-.xeE' includes: readStream peek ] ]
+		whileTrue: [ numberStream nextPut: readStream next ].
 	self consumeWhitespace.
-	^ number
+	^Number fromString: numberStream contents
 !
 
 parseNumberExponent
@@ -1232,10 +1225,7 @@ isSeparator
 !
 
 stonOn: stonWriter
-	"Ugly hack for characters ie. String with only one character are considered Character instances - needs to be better considered"
-	self size == 1 
-		ifTrue: [ stonWriter writeCharacter: self ]
-		ifFalse: [ stonWriter writeString: self ]
+	stonWriter writeString: self
 !
 
 stonProcessSubObjects: block

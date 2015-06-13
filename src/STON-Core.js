@@ -1563,83 +1563,58 @@ selector: "parseNumber",
 protocol: 'parsing-internal',
 fn: function () {
 var self=this;
-var negated,number;
+var numberStream,number;
+function $StringStream(){return $globals.StringStream||(typeof StringStream=="undefined"?nil:StringStream)}
+function $String(){return $globals.String||(typeof String=="undefined"?nil:String)}
+function $Number(){return $globals.Number||(typeof Number=="undefined"?nil:Number)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
-var $1,$2,$4,$3,$7,$6,$5,$8,$9;
-$1=$recv(self["@readStream"])._peek();
-//>>excludeStart("ctx", pragmas.excludeDebugContexts);
-$ctx1.sendIdx["peek"]=1;
-//>>excludeEnd("ctx");
-negated=$recv($1).__eq("-");
-//>>excludeStart("ctx", pragmas.excludeDebugContexts);
-$ctx1.sendIdx["="]=1;
-//>>excludeEnd("ctx");
-$2=negated;
-if($core.assert($2)){
-$recv(self["@readStream"])._next();
-//>>excludeStart("ctx", pragmas.excludeDebugContexts);
-$ctx1.sendIdx["next"]=1;
-//>>excludeEnd("ctx");
-};
-number=self._parseNumberInteger();
-$4=$recv(self["@readStream"])._peek();
-//>>excludeStart("ctx", pragmas.excludeDebugContexts);
-$ctx1.sendIdx["peek"]=2;
-//>>excludeEnd("ctx");
-$3=$recv($4).__eq(".");
-//>>excludeStart("ctx", pragmas.excludeDebugContexts);
-$ctx1.sendIdx["="]=2;
-//>>excludeEnd("ctx");
-if($core.assert($3)){
-$recv(self["@readStream"])._next();
-//>>excludeStart("ctx", pragmas.excludeDebugContexts);
-$ctx1.sendIdx["next"]=2;
-//>>excludeEnd("ctx");
-number=$recv(number).__plus(self._parseNumberFraction());
-number;
-};
-$7=$recv(self["@readStream"])._peek();
-//>>excludeStart("ctx", pragmas.excludeDebugContexts);
-$ctx1.sendIdx["peek"]=3;
-//>>excludeEnd("ctx");
-$6=$recv($7).__eq("e");
-//>>excludeStart("ctx", pragmas.excludeDebugContexts);
-$ctx1.sendIdx["="]=3;
-//>>excludeEnd("ctx");
-$5=$recv($6)._or_((function(){
+var $2,$1,$3;
+numberStream=$recv($StringStream())._on_($recv($String())._new());
+$recv((function(){
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx2) {
 //>>excludeEnd("ctx");
-return $recv($recv(self["@readStream"])._peek()).__eq("E");
+$2=$recv(self["@readStream"])._peek();
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+$ctx2.sendIdx["peek"]=1;
+//>>excludeEnd("ctx");
+$1=$recv($2)._isDigit();
+return $recv($1)._or_((function(){
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx3) {
+//>>excludeEnd("ctx");
+return "-.xeE"._includes_($recv(self["@readStream"])._peek());
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx3) {$ctx3.fillBlock({},$ctx2,2)});
+//>>excludeEnd("ctx");
+}));
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx2) {$ctx2.fillBlock({},$ctx1,1)});
+//>>excludeEnd("ctx");
+}))._whileTrue_((function(){
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx2) {
+//>>excludeEnd("ctx");
+return $recv(numberStream)._nextPut_($recv(self["@readStream"])._next());
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 }, function($ctx2) {$ctx2.fillBlock({},$ctx1,3)});
 //>>excludeEnd("ctx");
 }));
-if($core.assert($5)){
-$recv(self["@readStream"])._next();
-number=$recv(number).__star(self._parseNumberExponent());
-number;
-};
-$8=negated;
-if($core.assert($8)){
-number=$recv(number)._negated();
-number;
-};
 self._consumeWhitespace();
-$9=number;
-return $9;
+$3=$recv($Number())._fromString_($recv(numberStream)._contents());
+return $3;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
-}, function($ctx1) {$ctx1.fill(self,"parseNumber",{negated:negated,number:number},$globals.STONReader)});
+}, function($ctx1) {$ctx1.fill(self,"parseNumber",{numberStream:numberStream,number:number},$globals.STONReader)});
 //>>excludeEnd("ctx");
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "parseNumber\x0a\x09| negated number |\x0a\x09negated := readStream peek = $-.\x0a\x09negated ifTrue: [ readStream next ].\x0a\x09number := self parseNumberInteger.\x0a\x09(readStream peek = $.) ifTrue: [\x0a\x09\x09readStream next. \x0a\x09\x09number := number + self parseNumberFraction ].\x0a\x09(readStream peek = $e or: [ readStream peek = $E ]) ifTrue: [\x0a\x09\x09readStream next.\x0a\x09\x09number := number * self parseNumberExponent ].\x0a\x09negated ifTrue: [ number := number negated ].\x0a\x09self consumeWhitespace.\x0a\x09^ number",
-referencedClasses: [],
+source: "parseNumber\x0a\x09| numberStream number |\x0a\x09numberStream := StringStream on: String new.\x0a\x09[ readStream peek isDigit or: [ '-.xeE' includes: readStream peek ] ]\x0a\x09\x09whileTrue: [ numberStream nextPut: readStream next ].\x0a\x09self consumeWhitespace.\x0a\x09^Number fromString: numberStream contents",
+referencedClasses: ["StringStream", "String", "Number"],
 //>>excludeEnd("ide");
-messageSends: ["=", "peek", "ifTrue:", "next", "parseNumberInteger", "+", "parseNumberFraction", "or:", "*", "parseNumberExponent", "negated", "consumeWhitespace"]
+messageSends: ["on:", "new", "whileTrue:", "or:", "isDigit", "peek", "includes:", "nextPut:", "next", "consumeWhitespace", "fromString:", "contents"]
 }),
 $globals.STONReader);
 
@@ -5063,13 +5038,7 @@ var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
-var $1;
-$1=$recv(self._size()).__eq_eq((1));
-if($core.assert($1)){
-$recv(stonWriter)._writeCharacter_(self);
-} else {
 $recv(stonWriter)._writeString_(self);
-};
 return self;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 }, function($ctx1) {$ctx1.fill(self,"stonOn:",{stonWriter:stonWriter},$globals.String)});
@@ -5077,10 +5046,10 @@ return self;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: ["stonWriter"],
-source: "stonOn: stonWriter\x0a\x09\x22Ugly hack for characters ie. String with only one character are considered Character instances - needs to be better considered\x22\x0a\x09self size == 1 \x0a\x09\x09ifTrue: [ stonWriter writeCharacter: self ]\x0a\x09\x09ifFalse: [ stonWriter writeString: self ]",
+source: "stonOn: stonWriter\x0a\x09stonWriter writeString: self",
 referencedClasses: [],
 //>>excludeEnd("ide");
-messageSends: ["ifTrue:ifFalse:", "==", "size", "writeCharacter:", "writeString:"]
+messageSends: ["writeString:"]
 }),
 $globals.String);
 

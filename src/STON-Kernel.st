@@ -32,3 +32,9 @@ Dictionary subclass: #IdentityDictionary
 	instanceVariableNames: ''
 	package: 'STON-Kernel'!
 
+!Number class methodsFor: '*STON-Kernel'!
+
+fromString: aString
+	<return Number(aString)>
+! !
+
