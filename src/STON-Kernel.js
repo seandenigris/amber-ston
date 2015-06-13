@@ -1,4 +1,4 @@
-define("amber-ston/STON-Kernel", ["amber/boot", "amber_core/Kernel-Collections"], function($boot){"use strict";
+define("amber-ston/STON-Kernel", ["amber/boot", "amber_core/Kernel-Collections", "amber_core/Kernel-Objects"], function($boot){"use strict";
 var $core=$boot.api,nil=$boot.nil,$recv=$boot.asReceiver,$globals=$boot.globals;
 $core.addPackage('STON-Kernel');
 $core.packages["STON-Kernel"].innerEval = function (expr) { return eval(expr); };
@@ -15,7 +15,7 @@ $globals.Character.comment="This is a hack to support transport of Characters in
 $core.addMethod(
 $core.method({
 selector: "fromSton:",
-protocol: 'not yet classified',
+protocol: 'STON',
 fn: function (stonReader) {
 var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -36,6 +36,36 @@ referencedClasses: [],
 messageSends: ["first", "parseListSingleton"]
 }),
 $globals.Character.klass);
+
+
+$core.addClass('DateAndTime', $globals.Date, [], 'STON-Kernel');
+
+$core.addMethod(
+$core.method({
+selector: "fromSton:",
+protocol: 'STON',
+fn: function (stonReader) {
+var self=this;
+var stream;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx1) {
+//>>excludeEnd("ctx");
+var $1;
+stream=$recv($recv(stonReader)._parseListSingleton())._readStream();
+$1=self._fromString_($recv(stream)._contents());
+return $1;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx1) {$ctx1.fill(self,"fromSton:",{stonReader:stonReader,stream:stream},$globals.DateAndTime.klass)});
+//>>excludeEnd("ctx");
+},
+//>>excludeStart("ide", pragmas.excludeIdeData);
+args: ["stonReader"],
+source: "fromSton: stonReader\x0a\x09| stream |\x0a\x09(stream := stonReader parseListSingleton readStream).\x0a\x09^ self fromString: stream contents",
+referencedClasses: [],
+//>>excludeEnd("ide");
+messageSends: ["readStream", "parseListSingleton", "fromString:", "contents"]
+}),
+$globals.DateAndTime.klass);
 
 
 $core.addClass('IdentityDictionary', $globals.Dictionary, [], 'STON-Kernel');

@@ -1105,7 +1105,7 @@ testDate
 testDateAndTime
 	"DateAndTime is just a Date in Amber so if there is a time component ie. hours minutes or seconds are not 0, then write as a DateAndTime"
 	| dateAndTime |
-	dateAndTime :=  Date fromString: '2012/01/30 06:30:15+11:00'.
+	dateAndTime :=  DateAndTime fromString: '2012-01-01T06:30:15+11:00'.
 	self assert: (self serialize: dateAndTime) = 'DateAndTime[''2012-01-01T06:30:15+11:00'']'
 !
 

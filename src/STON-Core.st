@@ -1099,17 +1099,8 @@ stonOn: stonWriter
 	^ (aDate isKindOf: Date) and: [ self time == aDate time ]
 !
 
-stonOn: stonWriter
-	"Use an ISO style YYYYMMDD representation"
-	
-	stonWriter writeObject: self listSingleton: self yyyymmdd
-!
-
-stonProcessSubObjects: block
-!
-
-yyyymmdd
- 	"Format the date in ISO 8601 standard like '2002-10-22'
+asISODate
+ 	"Format the date only in ISO 8601 standard like '2002-10-22'
 	The result is of fixed size 10 characters long.."
 	^ String streamContents: [ :aStream |
 		self year printOn: aStream.
@@ -1120,6 +1111,22 @@ yyyymmdd
 		self dayOfMonth < 10 ifTrue: [ aStream nextPut: $0].
 		self dayOfMonth printOn: aStream.
 	]
+!
+
+asISOString
+	"Answer the Date and Time in ISO 8601 format"
+	<return self.toISOString()>
+!
+
+stonOn: stonWriter
+	"Use an ISO style YYYY-MM-DD representation for dates.
+	if there is a time component, serialize as DateAndTime.
+	Notes: How to tell if there is a time component?"
+	
+	stonWriter writeObject: self listSingleton: self asISODate
+!
+
+stonProcessSubObjects: block
 ! !
 
 !Date class methodsFor: '*STON-Core'!
@@ -1127,7 +1134,11 @@ yyyymmdd
 fromSton: stonReader
 	| stream |
 	(stream := stonReader parseListSingleton readStream).
-	^ self fromString: (stream contents replace: '-' with: '/')
+	^ (self fromString: stream contents)
+		hours: 0;
+		minutes: 0;
+		seconds: 0;
+		yourself
 ! !
 
 !Dictionary methodsFor: '*STON-Core'!

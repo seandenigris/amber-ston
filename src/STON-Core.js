@@ -4462,49 +4462,7 @@ $globals.Date);
 
 $core.addMethod(
 $core.method({
-selector: "stonOn:",
-protocol: '*STON-Core',
-fn: function (stonWriter) {
-var self=this;
-//>>excludeStart("ctx", pragmas.excludeDebugContexts);
-return $core.withContext(function($ctx1) {
-//>>excludeEnd("ctx");
-$recv(stonWriter)._writeObject_listSingleton_(self,self._yyyymmdd());
-return self;
-//>>excludeStart("ctx", pragmas.excludeDebugContexts);
-}, function($ctx1) {$ctx1.fill(self,"stonOn:",{stonWriter:stonWriter},$globals.Date)});
-//>>excludeEnd("ctx");
-},
-//>>excludeStart("ide", pragmas.excludeIdeData);
-args: ["stonWriter"],
-source: "stonOn: stonWriter\x0a\x09\x22Use an ISO style YYYYMMDD representation\x22\x0a\x09\x0a\x09stonWriter writeObject: self listSingleton: self yyyymmdd",
-referencedClasses: [],
-//>>excludeEnd("ide");
-messageSends: ["writeObject:listSingleton:", "yyyymmdd"]
-}),
-$globals.Date);
-
-$core.addMethod(
-$core.method({
-selector: "stonProcessSubObjects:",
-protocol: '*STON-Core',
-fn: function (block) {
-var self=this;
-return self;
-
-},
-//>>excludeStart("ide", pragmas.excludeIdeData);
-args: ["block"],
-source: "stonProcessSubObjects: block",
-referencedClasses: [],
-//>>excludeEnd("ide");
-messageSends: []
-}),
-$globals.Date);
-
-$core.addMethod(
-$core.method({
-selector: "yyyymmdd",
+selector: "asISODate",
 protocol: '*STON-Core',
 fn: function () {
 var self=this;
@@ -4562,15 +4520,81 @@ return $recv(self._dayOfMonth())._printOn_(aStream);
 }));
 return $1;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
-}, function($ctx1) {$ctx1.fill(self,"yyyymmdd",{},$globals.Date)});
+}, function($ctx1) {$ctx1.fill(self,"asISODate",{},$globals.Date)});
 //>>excludeEnd("ctx");
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "yyyymmdd\x0a \x09\x22Format the date in ISO 8601 standard like '2002-10-22'\x0a\x09The result is of fixed size 10 characters long..\x22\x0a\x09^ String streamContents: [ :aStream |\x0a\x09\x09self year printOn: aStream.\x0a\x09\x09aStream nextPut: $-.\x0a\x09\x09self month < 10 ifTrue: [ aStream nextPut: $0].\x0a\x09\x09self month printOn: aStream.\x0a\x09\x09aStream nextPut: $-.\x0a\x09\x09self dayOfMonth < 10 ifTrue: [ aStream nextPut: $0].\x0a\x09\x09self dayOfMonth printOn: aStream.\x0a\x09]",
+source: "asISODate\x0a \x09\x22Format the date only in ISO 8601 standard like '2002-10-22'\x0a\x09The result is of fixed size 10 characters long..\x22\x0a\x09^ String streamContents: [ :aStream |\x0a\x09\x09self year printOn: aStream.\x0a\x09\x09aStream nextPut: $-.\x0a\x09\x09self month < 10 ifTrue: [ aStream nextPut: $0].\x0a\x09\x09self month printOn: aStream.\x0a\x09\x09aStream nextPut: $-.\x0a\x09\x09self dayOfMonth < 10 ifTrue: [ aStream nextPut: $0].\x0a\x09\x09self dayOfMonth printOn: aStream.\x0a\x09]",
 referencedClasses: ["String"],
 //>>excludeEnd("ide");
 messageSends: ["streamContents:", "printOn:", "year", "nextPut:", "ifTrue:", "<", "month", "dayOfMonth"]
+}),
+$globals.Date);
+
+$core.addMethod(
+$core.method({
+selector: "asISOString",
+protocol: '*STON-Core',
+fn: function () {
+var self=this;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx1) {
+//>>excludeEnd("ctx");
+return self.toISOString();
+return self;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx1) {$ctx1.fill(self,"asISOString",{},$globals.Date)});
+//>>excludeEnd("ctx");
+},
+//>>excludeStart("ide", pragmas.excludeIdeData);
+args: [],
+source: "asISOString\x0a\x09\x22Answer the Date and Time in ISO 8601 format\x22\x0a\x09<return self.toISOString()>",
+referencedClasses: [],
+//>>excludeEnd("ide");
+messageSends: []
+}),
+$globals.Date);
+
+$core.addMethod(
+$core.method({
+selector: "stonOn:",
+protocol: '*STON-Core',
+fn: function (stonWriter) {
+var self=this;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+return $core.withContext(function($ctx1) {
+//>>excludeEnd("ctx");
+$recv(stonWriter)._writeObject_listSingleton_(self,self._asISODate());
+return self;
+//>>excludeStart("ctx", pragmas.excludeDebugContexts);
+}, function($ctx1) {$ctx1.fill(self,"stonOn:",{stonWriter:stonWriter},$globals.Date)});
+//>>excludeEnd("ctx");
+},
+//>>excludeStart("ide", pragmas.excludeIdeData);
+args: ["stonWriter"],
+source: "stonOn: stonWriter\x0a\x09\x22Use an ISO style YYYY-MM-DD representation for dates.\x0a\x09if there is a time component, serialize as DateAndTime.\x0a\x09Notes: How to tell if there is a time component?\x22\x0a\x09\x0a\x09stonWriter writeObject: self listSingleton: self asISODate",
+referencedClasses: [],
+//>>excludeEnd("ide");
+messageSends: ["writeObject:listSingleton:", "asISODate"]
+}),
+$globals.Date);
+
+$core.addMethod(
+$core.method({
+selector: "stonProcessSubObjects:",
+protocol: '*STON-Core',
+fn: function (block) {
+var self=this;
+return self;
+
+},
+//>>excludeStart("ide", pragmas.excludeIdeData);
+args: ["block"],
+source: "stonProcessSubObjects: block",
+referencedClasses: [],
+//>>excludeEnd("ide");
+messageSends: []
 }),
 $globals.Date);
 
@@ -4584,9 +4608,14 @@ var stream;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
-var $1;
+var $2,$3,$1;
 stream=$recv($recv(stonReader)._parseListSingleton())._readStream();
-$1=self._fromString_($recv($recv(stream)._contents())._replace_with_("-","/"));
+$2=self._fromString_($recv(stream)._contents());
+$recv($2)._hours_((0));
+$recv($2)._minutes_((0));
+$recv($2)._seconds_((0));
+$3=$recv($2)._yourself();
+$1=$3;
 return $1;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 }, function($ctx1) {$ctx1.fill(self,"fromSton:",{stonReader:stonReader,stream:stream},$globals.Date.klass)});
@@ -4594,10 +4623,10 @@ return $1;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: ["stonReader"],
-source: "fromSton: stonReader\x0a\x09| stream |\x0a\x09(stream := stonReader parseListSingleton readStream).\x0a\x09^ self fromString: (stream contents replace: '-' with: '/')",
+source: "fromSton: stonReader\x0a\x09| stream |\x0a\x09(stream := stonReader parseListSingleton readStream).\x0a\x09^ (self fromString: stream contents)\x0a\x09\x09hours: 0;\x0a\x09\x09minutes: 0;\x0a\x09\x09seconds: 0;\x0a\x09\x09yourself",
 referencedClasses: [],
 //>>excludeEnd("ide");
-messageSends: ["readStream", "parseListSingleton", "fromString:", "replace:with:", "contents"]
+messageSends: ["readStream", "parseListSingleton", "hours:", "fromString:", "contents", "minutes:", "seconds:", "yourself"]
 }),
 $globals.Date.klass);
 

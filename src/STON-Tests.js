@@ -5592,11 +5592,11 @@ protocol: 'tests',
 fn: function () {
 var self=this;
 var dateAndTime;
-function $Date(){return $globals.Date||(typeof Date=="undefined"?nil:Date)}
+function $DateAndTime(){return $globals.DateAndTime||(typeof DateAndTime=="undefined"?nil:DateAndTime)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
-dateAndTime=$recv($Date())._fromString_("2012/01/30 06:30:15+11:00");
+dateAndTime=$recv($DateAndTime())._fromString_("2012-01-01T06:30:15+11:00");
 self._assert_($recv(self._serialize_(dateAndTime)).__eq("DateAndTime['2012-01-01T06:30:15+11:00']"));
 return self;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -5605,8 +5605,8 @@ return self;
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: [],
-source: "testDateAndTime\x0a\x09\x22DateAndTime is just a Date in Amber so if there is a time component ie. hours minutes or seconds are not 0, then write as a DateAndTime\x22\x0a\x09| dateAndTime |\x0a\x09dateAndTime :=  Date fromString: '2012/01/30 06:30:15+11:00'.\x0a\x09self assert: (self serialize: dateAndTime) = 'DateAndTime[''2012-01-01T06:30:15+11:00'']'",
-referencedClasses: ["Date"],
+source: "testDateAndTime\x0a\x09\x22DateAndTime is just a Date in Amber so if there is a time component ie. hours minutes or seconds are not 0, then write as a DateAndTime\x22\x0a\x09| dateAndTime |\x0a\x09dateAndTime :=  DateAndTime fromString: '2012-01-01T06:30:15+11:00'.\x0a\x09self assert: (self serialize: dateAndTime) = 'DateAndTime[''2012-01-01T06:30:15+11:00'']'",
+referencedClasses: ["DateAndTime"],
 //>>excludeEnd("ide");
 messageSends: ["fromString:", "assert:", "=", "serialize:"]
 }),
