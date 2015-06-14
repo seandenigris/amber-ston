@@ -1,5 +1,7 @@
 # STON (Smalltalk Object Notation) for Amber Smalltalk
 
+## Note: This is not ready for use and has not been published in Bower as yet. The instructions below will not work yet.
+
 Port of STON (Smalltalk Object Notation) for Amber Smalltalk
 
 ## Getting Started
